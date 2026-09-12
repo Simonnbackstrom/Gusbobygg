@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-gb-black: #121212;
+  --color-gb-green: #24402F;
+  --color-gb-green-dark: #1a3022;
+  --color-gb-white: #FFFFFF;
+  --color-gb-slate: #53584F;
+  --font-sans: var(--font-inter);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #121212;
+  -webkit-font-smoothing: antialiased;
+}

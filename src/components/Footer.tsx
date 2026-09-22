@@ -1,10 +1,11 @@
+import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const navLinks = [
-  { label: "Vad vi gör", href: "#vad-vi-gor" },
-  { label: "Varför Gusbo", href: "#varfor-gusbo" },
-  { label: "Projekt", href: "#projekt" },
-  { label: "Kontakt", href: "#kontakt" },
+  { label: "Vad vi gör", href: "/vad-vi-gor" },
+  { label: "Varför Gusbo", href: "/varfor-gusbo" },
+  { label: "Projekt", href: "/projekt" },
+  { label: "Kontakt", href: "/kontakt" },
 ];
 
 export default function Footer() {
@@ -24,15 +25,14 @@ export default function Footer() {
               </p>
             </div>
             <p className="text-[#53584F] text-sm leading-relaxed mb-6">
-              Totalentreprenör med rötter i lantbruket. Vi bygger djurstallar
-              och lantbruksbyggnader — trovärdiga och kompetenta från start till
-              mål.
+              Totalentreprenör inom djurstallar och lantbruksbyggnader. Rötter
+              i jordbruket.
             </p>
             <div className="flex items-start gap-2 text-[#53584F] text-sm">
               <MapPin size={14} className="mt-0.5 shrink-0 text-[#24402F]" />
               <span>Sverige</span>
             </div>
-            <p className="text-[#3a3f38] text-xs mt-4">Org.nr: 556XXX-XXXX</p>
+            <p className="text-[#3a3a3a] text-xs mt-4">Org.nr: 556XXX-XXXX</p>
           </div>
 
           {/* Col 2: Navigation */}
@@ -43,12 +43,12 @@ export default function Footer() {
             <ul className="space-y-3">
               {navLinks.map((l) => (
                 <li key={l.href}>
-                  <a
+                  <Link
                     href={l.href}
                     className="text-[#53584F] text-sm hover:text-white transition-colors duration-200"
                   >
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -65,7 +65,7 @@ export default function Footer() {
                 className="flex items-center gap-3 text-[#53584F] hover:text-white transition-colors duration-200 group"
               >
                 <span className="w-8 h-8 rounded-full bg-[#24402F]/30 flex items-center justify-center shrink-0 group-hover:bg-[#24402F] transition-colors">
-                  <Phone size={14} className="text-[#8ab49a]" />
+                  <Phone size={14} className="text-white/60" />
                 </span>
                 <span className="text-sm">070-XXX XX XX</span>
               </a>
@@ -74,7 +74,7 @@ export default function Footer() {
                 className="flex items-center gap-3 text-[#53584F] hover:text-white transition-colors duration-200 group"
               >
                 <span className="w-8 h-8 rounded-full bg-[#24402F]/30 flex items-center justify-center shrink-0 group-hover:bg-[#24402F] transition-colors">
-                  <Mail size={14} className="text-[#8ab49a]" />
+                  <Mail size={14} className="text-white/60" />
                 </span>
                 <span className="text-sm">info@gusbobygg.se</span>
               </a>
@@ -86,10 +86,10 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/5">
         <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row justify-between items-center gap-2">
-          <p className="text-[#3a3f38] text-xs">
+          <p className="text-[#3a3a3a] text-xs">
             © {new Date().getFullYear()} Gusbo Bygg AB · Org.nr 556XXX-XXXX
           </p>
-          <p className="text-[#3a3f38] text-xs">
+          <p className="text-[#3a3a3a] text-xs">
             Byggt av{" "}
             <span className="text-[#53584F]">Dinmedia</span>
           </p>

@@ -17,7 +17,7 @@ export default function Contact() {
             </h2>
             <p className="text-[#c8d9cc] text-lg leading-relaxed mb-10">
               Vi svarar på dina frågor och berättar hur processen ser ut.
-              Föredrar du att ringa är det alltid snabbast.
+              Föredrar du att ringa är det snabbast.
             </p>
 
             <div className="flex flex-col gap-4">
@@ -91,7 +91,7 @@ export default function Contact() {
                 <textarea
                   name="meddelande"
                   rows={5}
-                  placeholder="Berätta kort om ditt projekt — typ av stall, ungefärlig storlek och tidplan om du vet."
+                  placeholder="Berätta kort om ditt projekt, typ av stall, ungefärlig storlek och tidplan om du vet."
                   className="bg-white/10 border border-white/20 text-white placeholder:text-white/30 px-4 py-3 text-sm focus:outline-none focus:border-white/60 transition-colors resize-none"
                 />
               </div>

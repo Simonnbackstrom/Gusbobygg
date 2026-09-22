@@ -1,11 +1,10 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
-import WhatWeDo from "@/components/WhatWeDo";
-import WhyGusbo from "@/components/WhyGusbo";
-import Gallery from "@/components/Gallery";
+import ServicesTeaser from "@/components/ServicesTeaser";
+import Story from "@/components/Story";
 import Projects from "@/components/Projects";
-import Contact from "@/components/Contact";
+import CtaBand from "@/components/CtaBand";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -14,11 +13,10 @@ export default function Home() {
       <Nav />
       <Hero />
       <Stats />
-      <WhatWeDo />
-      <WhyGusbo />
-      <Gallery />
+      <ServicesTeaser />
+      <Story />
       <Projects />
-      <Contact />
+      <CtaBand />
       <Footer />
     </main>
   );

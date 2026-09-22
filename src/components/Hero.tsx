@@ -4,34 +4,21 @@ import { Phone, ArrowDown } from "lucide-react";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
-      {/* Background image */}
       <Image
-        src="/images/hero-bg.jpg"
-        alt=""
+        src="/images/flygfoto/hero.jpg"
+        alt="Gårdsmiljö med ladugård, silo och skog"
         fill
         priority
         className="object-cover"
         sizes="100vw"
       />
-      {/* Green overlay */}
-      <div className="absolute inset-0 bg-[#24402F]/85" />
+      {/* Dark bottom-to-top gradient for legibility */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/95 via-[#121212]/55 to-[#121212]/20" />
+      {/* Subtle green tint on top for brand cohesion */}
+      <div className="absolute inset-0 bg-[#24402F]/25 mix-blend-multiply" />
 
-      {/* Subtle grid texture */}
-      <div
-        className="absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)",
-          backgroundSize: "20px 20px",
-        }}
-      />
-
-      <div className="relative max-w-6xl mx-auto px-6 pt-32 pb-24">
-        <p className="text-[#8ab49a] text-xs font-bold tracking-[0.2em] uppercase mb-8">
-          Totalentreprenör · Djurstallar & Lantbruk
-        </p>
-
-        <h1 className="text-white text-5xl sm:text-6xl md:text-7xl font-extrabold leading-[1.05] tracking-tight max-w-3xl mb-8">
+      <div className="relative max-w-6xl mx-auto px-6 pt-32 pb-24 w-full">
+        <h1 className="text-white text-5xl sm:text-6xl md:text-7xl font-extrabold leading-[1.02] tracking-tight max-w-4xl mb-8">
           Vi bygger
           <br />
           ladugårdar åt
@@ -39,9 +26,8 @@ export default function Hero() {
           bönder.
         </h1>
 
-        <p className="text-[#c8d9cc] text-xl sm:text-2xl font-medium max-w-xl mb-12 leading-relaxed">
-          Och vi vet vad vi gör. Hela kedjan, från planering till
-          inflyttning — utan krångel.
+        <p className="text-white/80 text-xl sm:text-2xl font-medium max-w-xl mb-12 leading-relaxed">
+          Och vi vet vad vi gör.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
@@ -53,14 +39,14 @@ export default function Hero() {
             Ring oss direkt
           </a>
           <a
-            href="mailto:info@gusbobygg.se"
-            className="inline-flex items-center justify-center gap-3 border-2 border-white/40 text-white font-semibold text-base px-8 py-4 hover:border-white/80 hover:bg-white/5 transition-all duration-200"
+            href="/vad-vi-gor"
+            className="inline-flex items-center justify-center gap-3 border-2 border-white/50 text-white font-semibold text-base px-8 py-4 hover:border-white hover:bg-white/5 transition-all duration-200"
           >
-            Skicka ett mejl
+            Så jobbar vi
           </a>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50">
           <ArrowDown size={20} className="animate-bounce" />
         </div>
       </div>

@@ -1,38 +1,26 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Phone, Menu, X } from "lucide-react";
 
 const links = [
-  { label: "Vad vi gör", href: "#vad-vi-gor" },
-  { label: "Varför Gusbo", href: "#varfor-gusbo" },
-  { label: "Projekt", href: "#projekt" },
-  { label: "Kontakt", href: "#kontakt" },
+  { label: "Vad vi gör", href: "/vad-vi-gor" },
+  { label: "Varför Gusbo", href: "/varfor-gusbo" },
+  { label: "Projekt", href: "/projekt" },
+  { label: "Kontakt", href: "/kontakt" },
 ];
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState("");
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => {
-    const sections = links.map((l) => document.querySelector(l.href));
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) setActive("#" + e.target.id);
-        });
-      },
-      { rootMargin: "-40% 0px -55% 0px" }
-    );
-    sections.forEach((s) => s && observer.observe(s));
-    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -51,29 +39,29 @@ export default function Nav() {
       >
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <span className="text-white font-bold text-xl tracking-tight">
               GUSBO BYGG
             </span>
             <span className="hidden sm:inline text-[#53584F] text-xs font-semibold tracking-[0.15em] uppercase mt-0.5">
               Totalentreprenör
             </span>
-          </a>
+          </Link>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
             {links.map((l) => (
-              <a
+              <Link
                 key={l.href}
                 href={l.href}
                 className={`text-sm font-semibold tracking-wide transition-colors duration-200 ${
-                  active === l.href
-                    ? "text-[#8ab49a]"
-                    : "text-white/70 hover:text-white"
+                  pathname === l.href
+                    ? "text-white"
+                    : "text-white/60 hover:text-white"
                 }`}
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -102,14 +90,16 @@ export default function Nav() {
         <div className="fixed inset-0 z-40 bg-[#121212] flex flex-col pt-24 px-8 md:hidden">
           <nav className="flex flex-col gap-2">
             {links.map((l) => (
-              <a
+              <Link
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="text-white text-3xl font-extrabold tracking-tight py-4 border-b border-white/10 hover:text-[#8ab49a] transition-colors"
+                className={`text-3xl font-extrabold tracking-tight py-4 border-b border-white/10 transition-colors ${
+                  pathname === l.href ? "text-white" : "text-white/60 hover:text-white"
+                }`}
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </nav>
           <a

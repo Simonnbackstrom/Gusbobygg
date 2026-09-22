@@ -11,7 +11,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Gusbo Bygg – Totalentreprenör inom djurstallar och lantbruk",
   description:
-    "Vi bygger ladugårdar åt bönder och vi vet vad vi gör. Gusbo Bygg är totalentreprenör med rötter i lantbruket – trovärdiga, kompetenta och utan krångel.",
+    "Vi bygger ladugårdar åt bönder och vi vet vad vi gör. Totalentreprenör inom djurstallar och lantbruksbyggnader, med rötter i jordbruket.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

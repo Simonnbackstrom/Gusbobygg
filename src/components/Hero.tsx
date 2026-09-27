@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Phone, ArrowDown } from "lucide-react";
+import { Phone } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -13,27 +13,23 @@ export default function Hero() {
         sizes="100vw"
       />
       {/* Dark bottom-to-top gradient for legibility */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/95 via-[#121212]/55 to-[#121212]/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-gb-ink/95 via-gb-ink/55 to-gb-ink/20" />
       {/* Subtle green tint on top for brand cohesion */}
-      <div className="absolute inset-0 bg-[#24402F]/25 mix-blend-multiply" />
+      <div className="absolute inset-0 bg-gb-forest/25 mix-blend-multiply" />
 
-      <div className="relative max-w-6xl mx-auto px-6 pt-32 pb-24 w-full">
-        <h1 className="text-white text-5xl sm:text-6xl md:text-7xl font-extrabold leading-[1.02] tracking-tight max-w-4xl mb-8">
-          Vi bygger
-          <br />
-          ladugårdar åt
-          <br />
-          bönder.
+      <div className="relative max-w-6xl mx-auto px-6 pt-32 pb-24 w-full text-center">
+        <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.05] tracking-tight mb-8 md:whitespace-nowrap">
+          Vi bygger ladugårdar åt bönder.
         </h1>
 
-        <p className="text-white/80 text-xl sm:text-2xl font-medium max-w-xl mb-12 leading-relaxed">
+        <p className="text-white/80 text-xl sm:text-2xl font-medium max-w-xl mx-auto mb-12 leading-relaxed">
           Och vi vet vad vi gör.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="tel:+46701234567"
-            className="inline-flex items-center justify-center gap-3 bg-white text-[#24402F] font-bold text-base px-8 py-4 hover:bg-[#f0f5f1] transition-colors duration-200"
+            className="inline-flex items-center justify-center gap-3 bg-gb-forest text-white font-bold text-base px-8 py-4 hover:bg-gb-forest-hover transition-colors duration-200"
           >
             <Phone size={18} strokeWidth={2.5} />
             Ring oss direkt
@@ -46,9 +42,6 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50">
-          <ArrowDown size={20} className="animate-bounce" />
-        </div>
       </div>
     </section>
   );

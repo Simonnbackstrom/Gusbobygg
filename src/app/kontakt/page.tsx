@@ -6,7 +6,7 @@ export default function KontaktPage() {
   return (
     <main>
       <Nav />
-      <div className="pt-20">
+      <div className="pt-32">
         <Contact />
       </div>
       <Footer />

@@ -15,10 +15,7 @@ export default function Gallery() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-end justify-between mb-10">
           <div>
-            <p className="text-[#24402F] text-xs font-bold tracking-[0.2em] uppercase mb-4">
-              Från bygget
-            </p>
-            <h2 className="text-[#121212] text-3xl md:text-4xl font-extrabold tracking-tight">
+            <h2 className="text-gb-ink text-3xl md:text-4xl font-extrabold tracking-tight">
               Verkligheten på gården
             </h2>
           </div>

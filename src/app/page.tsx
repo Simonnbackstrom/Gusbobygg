@@ -1,10 +1,11 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
+import Statement from "@/components/Statement";
 import ServicesTeaser from "@/components/ServicesTeaser";
 import Story from "@/components/Story";
 import Projects from "@/components/Projects";
-import CtaBand from "@/components/CtaBand";
+import Reviews from "@/components/Reviews";
+import HomeForm from "@/components/HomeForm";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -12,11 +13,12 @@ export default function Home() {
     <main>
       <Nav />
       <Hero />
-      <Stats />
+      <Statement />
       <ServicesTeaser />
-      <Story />
+      <Story cta={{ label: "Läs mer om oss", href: "/varfor-gusbo" }} />
       <Projects />
-      <CtaBand />
+      <Reviews />
+      <HomeForm />
       <Footer />
     </main>
   );

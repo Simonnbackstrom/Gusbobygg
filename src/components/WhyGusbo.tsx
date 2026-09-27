@@ -7,7 +7,7 @@ const reasons = [
   {
     number: "02",
     title: "Vi förstår lantbruket",
-    desc: "Med egen bakgrund i jordbruket vet vi vad som fungerar i praktiken — inte bara på ritningen.",
+    desc: "Vi har själva bakgrund i jordbruket. Det gör att vi vet vad som funkar i praktiken, inte bara på ritningen.",
   },
   {
     number: "03",
@@ -18,14 +18,11 @@ const reasons = [
 
 export default function WhyGusbo() {
   return (
-    <section id="varfor-gusbo" className="bg-[#121212] py-24 md:py-32">
+    <section id="varfor-gusbo" className="bg-gb-ink py-24 md:py-32">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Editorial layout: label + big quote */}
         <div className="mb-20 md:mb-24">
-          <p className="text-[#53584F] text-xs font-bold tracking-[0.2em] uppercase mb-8">
-            Varför Gusbo
-          </p>
           <blockquote className="text-white text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] max-w-3xl">
             "Trovärdiga och kompetenta i det vi håller på med. Vi bygger
             ladugårdar åt bönder och vi vet vad vi gör."
@@ -35,12 +32,12 @@ export default function WhyGusbo() {
         {/* Reasons grid */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/5">
           {reasons.map((r) => (
-            <div key={r.number} className="bg-[#121212] p-8 md:p-10 hover:bg-[#1a1a1a] transition-colors group">
-              <span className="text-[#24402F] text-xs font-bold tracking-widest block mb-6 group-hover:text-[#53584F] transition-colors">
+            <div key={r.number} className="bg-gb-ink p-8 md:p-10 hover:bg-gb-ink-hover transition-colors group">
+              <span className="text-gb-forest text-xs font-bold tracking-widest block mb-6 group-hover:text-gb-slate transition-colors">
                 {r.number}
               </span>
               <h3 className="text-white text-lg font-bold mb-3 leading-snug">{r.title}</h3>
-              <p className="text-[#53584F] leading-relaxed text-sm">{r.desc}</p>
+              <p className="text-gb-slate leading-relaxed text-sm">{r.desc}</p>
             </div>
           ))}
         </div>

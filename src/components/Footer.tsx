@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 
@@ -10,34 +11,49 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#121212]">
+    <footer className="bg-white">
       {/* Green top accent */}
-      <div className="h-0.5 bg-[#24402F]" />
+      <div className="h-0.5 bg-gb-forest" />
 
       <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           {/* Col 1: Company info */}
           <div>
-            <div className="mb-6">
-              <p className="text-white font-bold text-lg tracking-tight">GUSBO BYGG</p>
-              <p className="text-[#53584F] text-xs font-semibold tracking-[0.15em] uppercase mt-0.5">
-                Aktiebolaget
-              </p>
+            <div className="flex items-center gap-3 mb-6">
+              <Image
+                src="/logo-dark.png"
+                alt="Gusbo Bygg"
+                width={48}
+                height={48}
+                className="h-11 w-11 object-contain"
+              />
+              <div>
+                <p className="text-gb-ink font-bold text-lg tracking-tight leading-none">
+                  GUSBO BYGG
+                </p>
+                <p className="text-gb-slate text-xs font-semibold tracking-[0.15em] uppercase mt-1">
+                  Aktiebolaget
+                </p>
+              </div>
             </div>
-            <p className="text-[#53584F] text-sm leading-relaxed mb-6">
+            <p className="text-gb-slate text-sm leading-relaxed mb-6">
               Totalentreprenör inom djurstallar och lantbruksbyggnader. Rötter
               i jordbruket.
             </p>
-            <div className="flex items-start gap-2 text-[#53584F] text-sm">
-              <MapPin size={14} className="mt-0.5 shrink-0 text-[#24402F]" />
-              <span>Sverige</span>
+            <div className="flex items-start gap-2 text-gb-slate text-sm">
+              <MapPin size={14} className="mt-0.5 shrink-0 text-gb-forest" />
+              <span className="leading-relaxed">
+                Gusbo 6613
+                <br />
+                823 91 Kilafors
+              </span>
             </div>
-            <p className="text-[#3a3a3a] text-xs mt-4">Org.nr: 556XXX-XXXX</p>
+            <p className="text-gb-muted text-xs mt-4">Org.nr: 559518-1362</p>
           </div>
 
           {/* Col 2: Navigation */}
           <div>
-            <p className="text-white text-xs font-bold tracking-[0.15em] uppercase mb-6">
+            <p className="text-gb-ink text-xs font-bold tracking-[0.15em] uppercase mb-6">
               Snabblänkar
             </p>
             <ul className="space-y-3">
@@ -45,7 +61,7 @@ export default function Footer() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-[#53584F] text-sm hover:text-white transition-colors duration-200"
+                    className="text-gb-slate text-sm hover:text-gb-forest transition-colors duration-200"
                   >
                     {l.label}
                   </Link>
@@ -56,25 +72,25 @@ export default function Footer() {
 
           {/* Col 3: Contact */}
           <div>
-            <p className="text-white text-xs font-bold tracking-[0.15em] uppercase mb-6">
+            <p className="text-gb-ink text-xs font-bold tracking-[0.15em] uppercase mb-6">
               Kontakt
             </p>
             <div className="space-y-4">
               <a
                 href="tel:+46701234567"
-                className="flex items-center gap-3 text-[#53584F] hover:text-white transition-colors duration-200 group"
+                className="flex items-center gap-3 text-gb-slate hover:text-gb-forest transition-colors duration-200 group"
               >
-                <span className="w-8 h-8 rounded-full bg-[#24402F]/30 flex items-center justify-center shrink-0 group-hover:bg-[#24402F] transition-colors">
-                  <Phone size={14} className="text-white/60" />
+                <span className="w-8 h-8 rounded-full bg-gb-forest/10 flex items-center justify-center shrink-0 group-hover:bg-gb-forest transition-colors">
+                  <Phone size={14} className="text-gb-forest group-hover:text-white transition-colors" />
                 </span>
                 <span className="text-sm">070-XXX XX XX</span>
               </a>
               <a
                 href="mailto:info@gusbobygg.se"
-                className="flex items-center gap-3 text-[#53584F] hover:text-white transition-colors duration-200 group"
+                className="flex items-center gap-3 text-gb-slate hover:text-gb-forest transition-colors duration-200 group"
               >
-                <span className="w-8 h-8 rounded-full bg-[#24402F]/30 flex items-center justify-center shrink-0 group-hover:bg-[#24402F] transition-colors">
-                  <Mail size={14} className="text-white/60" />
+                <span className="w-8 h-8 rounded-full bg-gb-forest/10 flex items-center justify-center shrink-0 group-hover:bg-gb-forest transition-colors">
+                  <Mail size={14} className="text-gb-forest group-hover:text-white transition-colors" />
                 </span>
                 <span className="text-sm">info@gusbobygg.se</span>
               </a>
@@ -84,14 +100,13 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/5">
+      <div className="border-t border-gb-line">
         <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row justify-between items-center gap-2">
-          <p className="text-[#3a3a3a] text-xs">
-            © {new Date().getFullYear()} Gusbo Bygg AB · Org.nr 556XXX-XXXX
+          <p className="text-gb-muted text-xs">
+            © {new Date().getFullYear()} Aktiebolaget Gusbo Bygg · Org.nr 559518-1362
           </p>
-          <p className="text-[#3a3a3a] text-xs">
-            Byggt av{" "}
-            <span className="text-[#53584F]">Dinmedia</span>
+          <p className="text-gb-muted text-xs">
+            Byggt av <span className="text-gb-slate font-semibold">Dinmedia</span>
           </p>
         </div>
       </div>

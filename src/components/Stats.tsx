@@ -5,11 +5,8 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="bg-[#24402F] py-14 md:py-16">
+    <section className="bg-gb-forest py-14 md:py-16">
       <div className="max-w-6xl mx-auto px-6">
-        <p className="text-white/50 text-xs font-bold tracking-[0.2em] uppercase mb-8">
-          Nyckeltal — uppdateras
-        </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-4 divide-y-2 sm:divide-y-0 sm:divide-x divide-white/10">
           {stats.map((s) => (
             <div

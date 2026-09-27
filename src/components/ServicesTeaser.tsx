@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const services = [
@@ -6,16 +7,19 @@ const services = [
     title: "Mjölkstallar",
     desc: "Moderna anläggningar för robotmjölkning och fodersystem.",
     img: "/images/kamera/djur-02.jpg",
+    href: "/vad-vi-gor",
   },
   {
     title: "Djurstallar",
     desc: "Köttproduktion, smågrisar, hästar.",
     img: "/images/kamera/djur-01.jpg",
+    href: "/vad-vi-gor",
   },
   {
     title: "Lantbruksbyggnader",
     desc: "Maskinhallar, foderlager och plansilor.",
     img: "/images/flygfoto/05.jpg",
+    href: "/vad-vi-gor",
   },
 ];
 
@@ -23,28 +27,22 @@ export default function ServicesTeaser() {
   return (
     <section className="bg-white py-24 md:py-32">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 mb-16 md:mb-20">
-          <div>
-            <p className="text-[#24402F] text-xs font-bold tracking-[0.2em] uppercase mb-5">
-              Vad vi gör
-            </p>
-            <h2 className="text-[#121212] text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.1]">
-              Vad vi bygger
-            </h2>
-          </div>
-          <div className="flex items-end">
-            <p className="text-[#53584F] text-lg leading-relaxed">
-              Markarbete, betong, stomme, installation. En kontaktpunkt genom
-              bygget — ny ladugård, maskinhall eller ombyggnation.
-            </p>
-          </div>
+        <div className="text-center mb-16 md:mb-20 max-w-3xl mx-auto">
+          <h2 className="text-gb-ink text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">
+            Vad vi bygger
+          </h2>
+          <p className="text-gb-slate text-lg leading-relaxed">
+            Markarbete, betong, stomme, installation. En kontaktpunkt genom
+            hela bygget. Ny ladugård, maskinhall eller ombyggnation.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {services.map((s) => (
-            <div
+            <Link
               key={s.title}
-              className="group relative aspect-[4/5] overflow-hidden bg-[#121212]"
+              href={s.href}
+              className="group relative aspect-[4/5] overflow-hidden bg-gb-ink"
             >
               <Image
                 src={s.img}
@@ -53,26 +51,30 @@ export default function ServicesTeaser() {
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/95 via-[#121212]/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-gb-ink/95 via-gb-ink/40 to-transparent" />
               <div className="absolute inset-0 flex flex-col justify-end p-7">
                 <h3 className="text-white text-2xl font-extrabold tracking-tight mb-2">
                   {s.title}
                 </h3>
-                <p className="text-white/75 text-sm leading-relaxed">
+                <p className="text-white/75 text-sm leading-relaxed mb-5">
                   {s.desc}
                 </p>
+                <span className="inline-flex items-center gap-2 text-gb-mint text-sm font-bold tracking-wide group-hover:gap-3 transition-all">
+                  Läs mer
+                  <ArrowRight size={14} strokeWidth={2.5} />
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
-        <div className="mt-12 flex justify-center">
+        <div className="mt-14 flex justify-center">
           <a
-            href="/vad-vi-gor"
-            className="inline-flex items-center gap-3 text-[#24402F] font-bold text-sm tracking-wide border-b-2 border-[#24402F] pb-1 hover:gap-4 transition-all"
+            href="#offert"
+            className="inline-flex items-center gap-3 bg-gb-forest text-white font-bold text-base px-8 py-4 hover:bg-gb-forest-hover transition-colors duration-200"
           >
-            Vad vi gör
-            <ArrowRight size={16} strokeWidth={2.5} />
+            Kontakta oss
+            <ArrowRight size={18} strokeWidth={2.5} />
           </a>
         </div>
       </div>

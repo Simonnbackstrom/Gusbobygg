@@ -1,11 +1,24 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-gb-black: #121212;
-  --color-gb-green: #24402F;
-  --color-gb-green-dark: #1a3022;
-  --color-gb-white: #FFFFFF;
+  /* Brand core (från grafisk profil) */
+  --color-gb-ink: #121212;
+  --color-gb-forest: #24402F;
   --color-gb-slate: #53584F;
+  --color-gb-white: #FFFFFF;
+
+  /* Utility varianter */
+  --color-gb-ink-hover: #1a1a1a;
+  --color-gb-forest-hover: #1a3022;
+  --color-gb-mint: #8ab49a;
+  --color-gb-mint-tint: #f0f5f1;
+  --color-gb-mint-body: #c8d9cc;
+  --color-gb-cream: #faf8f4;
+  --color-gb-line: #e5e5e2;
+  --color-gb-ghost: #d4d4d4;
+  --color-gb-muted: #8a8f85;
+  --color-gb-body-inv: #c8c8c8;
+
   --font-sans: var(--font-inter);
 }
 
@@ -18,7 +31,7 @@ html {
 }
 
 body {
-  background-color: #FFFFFF;
-  color: #121212;
+  background-color: var(--color-gb-white);
+  color: var(--color-gb-ink);
   -webkit-font-smoothing: antialiased;
 }

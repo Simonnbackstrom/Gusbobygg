@@ -15,9 +15,9 @@ export default function Home() {
       <Hero />
       <Statement />
       <ServicesTeaser />
-      <Story cta={{ label: "Läs mer om oss", href: "/varfor-gusbo" }} />
       <Projects />
       <Reviews />
+      <Story cta={{ label: "Läs mer om oss", href: "/varfor-gusbo" }} />
       <HomeForm />
       <Footer />
     </main>

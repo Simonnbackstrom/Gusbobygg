@@ -14,7 +14,7 @@ export default function CtaBand({
         <div className="max-w-3xl">
           <span aria-hidden className="block h-[2px] w-16 bg-gb-forest mb-10" />
 
-          <h2 className="text-gb-ink text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-10">
+          <h2 className="text-gb-ink text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.05] mb-10">
             {heading}
           </h2>
 

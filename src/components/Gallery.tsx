@@ -13,12 +13,11 @@ export default function Gallery() {
   return (
     <section className="bg-white py-24 md:py-32">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="flex items-end justify-between mb-10">
-          <div>
-            <h2 className="text-gb-ink text-3xl md:text-4xl font-extrabold tracking-tight">
-              Verkligheten på gården
-            </h2>
-          </div>
+        <div className="max-w-2xl mb-14 md:mb-16">
+          <span aria-hidden className="block h-[2px] w-16 bg-gb-forest mb-8" />
+          <h2 className="text-gb-ink text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.05]">
+            Verkligheten på gården.
+          </h2>
         </div>
 
         {/* Editorial 3-col grid, first image tall */}

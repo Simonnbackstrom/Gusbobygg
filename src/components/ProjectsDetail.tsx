@@ -16,7 +16,7 @@ const projects = [
       { label: "Omfattning", value: "Nyckelfärdigt" },
     ],
     body: [
-      "En ny ladugård byggd från grunden åt en mjölkgård i Kilafors. Vi tog över hela projektet — markarbete, betong, stomme och installationer — så bonden kunde fokusera på drift och djur under bygget.",
+      "En ny ladugård byggd från grunden åt en mjölkgård i Kilafors. Vi tog över hela projektet. Markarbete, betong, stomme och installationer. Bonden kunde fokusera på drift och djur under bygget.",
       "Stallet är planerat för robotmjölkning med genomtänkta flöden för foder, gödsel och personal. Ventilation och belysning är dimensionerade efter djurantal och rutiner, och materialvalet är gjort för att klara många år av dagligt slitage.",
     ],
     img: "/images/flygfoto/01.jpg",
@@ -36,7 +36,7 @@ const projects = [
     ],
     body: [
       "Ett nytt djurstall åt en gård utanför Bollnäs. Byggnaden är ritad utifrån hur besättningen rör sig genom stallet, med breda gångar, tydliga zoner och god ventilation.",
-      "Vi stod för hela entreprenaden — från grundläggning till färdig anläggning — och samordnade underentreprenörer så att gården hade en kontaktpunkt genom hela projektet.",
+      "Vi stod för hela entreprenaden, från grundläggning till färdig anläggning. Vi samordnade underentreprenörer så att gården hade en kontaktpunkt genom hela projektet.",
     ],
     img: "/images/flygfoto/hero.jpg",
   },
@@ -49,7 +49,7 @@ export default function ProjectsDetail() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 mb-20 md:mb-24">
           <div className="md:col-span-7">
             <span aria-hidden className="block h-[2px] w-16 bg-gb-forest mb-8" />
-            <h1 className="text-gb-ink text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05]">
+            <h1 className="text-gb-ink text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.02]">
               Referensprojekt
               <br />
               från gårdar vi byggt åt.
@@ -58,15 +58,15 @@ export default function ProjectsDetail() {
           <div className="md:col-span-5 flex items-end">
             <div className="space-y-5 text-gb-slate text-lg leading-[1.7]">
               <p>
-                Här samlar vi projekt vi tagit ansvar för — från första skiss
+                Här samlar vi projekt vi tagit ansvar för, från första skiss
                 och ritning till slutbesiktning och överlämning. Varje bygge
                 är olika, men arbetssättet är detsamma: en kontaktpunkt,
                 tydlig tidplan och hantverk som håller.
               </p>
               <p>
                 Vi lägger upp fler referenser efterhand. Vill du veta mer om
-                ett specifikt bygge eller höra vad som passar din gård —
-                hör av dig så berättar vi.
+                ett specifikt bygge eller höra vad som passar din gård, hör
+                av dig så berättar vi.
               </p>
             </div>
           </div>

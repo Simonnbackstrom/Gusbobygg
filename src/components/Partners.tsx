@@ -14,7 +14,7 @@ export default function Partners() {
     <section className="bg-white py-24 md:py-32 border-t border-gb-line">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
-          <h2 className="text-gb-ink text-2xl md:text-4xl font-extrabold tracking-tight leading-tight max-w-2xl mx-auto">
+          <h2 className="text-gb-ink text-3xl md:text-4xl font-extrabold tracking-tight leading-tight max-w-2xl mx-auto">
             Vi arbetar med de bästa i branschen.
           </h2>
         </div>

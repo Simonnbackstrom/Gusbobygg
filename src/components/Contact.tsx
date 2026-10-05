@@ -20,7 +20,7 @@ export default function Contact() {
 
             <div className="flex flex-col gap-4">
               <a
-                href="tel:+46701234567"
+                href="tel:+46703622532"
                 className="inline-flex items-center gap-3 bg-white text-gb-forest font-bold text-base px-8 py-4 hover:bg-gb-mint-tint transition-colors duration-200 self-start"
               >
                 <Phone size={18} strokeWidth={2.5} />

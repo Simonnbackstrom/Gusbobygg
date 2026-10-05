@@ -18,17 +18,26 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gb-forest/25 mix-blend-multiply" />
 
       <div className="relative max-w-6xl mx-auto px-6 pt-32 pb-24 w-full text-center">
-        <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.05] tracking-tight mb-8 md:whitespace-nowrap">
+        <h1
+          className="gb-hero-rise text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.05] tracking-tight mb-8 md:whitespace-nowrap"
+          style={{ animationDelay: "120ms" }}
+        >
           Vi bygger ladugårdar åt bönder.
         </h1>
 
-        <p className="text-white/80 text-xl sm:text-2xl font-medium max-w-xl mx-auto mb-12 leading-relaxed">
+        <p
+          className="gb-hero-rise text-white/80 text-xl sm:text-2xl font-medium max-w-xl mx-auto mb-12 leading-relaxed"
+          style={{ animationDelay: "320ms" }}
+        >
           Och vi vet vad vi gör.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div
+          className="gb-hero-fade flex flex-col sm:flex-row gap-4 justify-center"
+          style={{ animationDelay: "560ms" }}
+        >
           <a
-            href="tel:+46701234567"
+            href="tel:+46703622532"
             className="inline-flex items-center justify-center gap-3 bg-gb-forest text-white font-bold text-base px-8 py-4 hover:bg-gb-forest-hover transition-colors duration-200"
           >
             <Phone size={18} strokeWidth={2.5} />

@@ -19,23 +19,18 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           {/* Col 1: Company info */}
           <div>
-            <div className="flex items-center gap-3 mb-6">
+            <Link href="/" aria-label="Gusbo Bygg - startsida" className="inline-flex items-center gap-3 mb-6 hover:opacity-80 transition-opacity">
               <Image
                 src="/logo-dark.png"
-                alt="Gusbo Bygg"
-                width={48}
-                height={48}
-                className="h-11 w-11 object-contain"
+                alt="Aktiebolaget Gusbo Bygg"
+                width={96}
+                height={96}
+                className="h-12 w-12 object-contain"
               />
-              <div>
-                <p className="text-gb-ink font-bold text-lg tracking-tight leading-none">
-                  GUSBO BYGG
-                </p>
-                <p className="text-gb-slate text-xs font-semibold tracking-[0.15em] uppercase mt-1">
-                  Aktiebolaget
-                </p>
-              </div>
-            </div>
+              <span className="text-gb-ink font-bold text-xl tracking-tight">
+                GUSBO BYGG
+              </span>
+            </Link>
             <p className="text-gb-slate text-sm leading-relaxed mb-6">
               Totalentreprenör inom djurstallar och lantbruksbyggnader. Rötter
               i jordbruket.
@@ -77,13 +72,13 @@ export default function Footer() {
             </p>
             <div className="space-y-4">
               <a
-                href="tel:+46701234567"
+                href="tel:+46703622532"
                 className="flex items-center gap-3 text-gb-slate hover:text-gb-forest transition-colors duration-200 group"
               >
                 <span className="w-8 h-8 rounded-full bg-gb-forest/10 flex items-center justify-center shrink-0 group-hover:bg-gb-forest transition-colors">
                   <Phone size={14} className="text-gb-forest group-hover:text-white transition-colors" />
                 </span>
-                <span className="text-sm">070-XXX XX XX</span>
+                <span className="text-sm">070-362 25 32</span>
               </a>
               <a
                 href="mailto:info@gusbobygg.se"

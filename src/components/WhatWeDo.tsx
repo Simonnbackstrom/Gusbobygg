@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 
 const pillars = [
   {
@@ -21,8 +21,8 @@ const pillars = [
     number: "03",
     h: "Du har en kontakt",
     p: "En person att ringa, en som vet var projektet står. Du slipper hänga i luren mellan hantverkare.",
-    img: "/images/kamera/portratt.jpg",
-    alt: "Projektledare med Gusbo-emblemet",
+    img: "/images/team/edvin.jpg",
+    alt: "Edvin Säll, grundare och projektledare",
   },
 ];
 
@@ -38,15 +38,31 @@ export default function WhatWeDo() {
   return (
     <section id="vad-vi-gor" className="bg-white">
       <div className="max-w-6xl mx-auto px-6 pt-20 md:pt-28 pb-14 md:pb-16">
-        <div className="max-w-3xl">
-          <span aria-hidden className="block h-[2px] w-16 bg-gb-forest mb-8" />
+        <div className="max-w-3xl mx-auto text-center">
+          <span aria-hidden className="block h-[2px] w-16 bg-gb-forest mx-auto mb-8" />
           <h1 className="text-gb-ink text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.02] mb-8">
             Så funkar det.
           </h1>
-          <p className="text-gb-slate text-xl md:text-2xl leading-[1.5]">
+          <p className="text-gb-slate text-xl md:text-2xl leading-[1.5] mb-10">
             Du köper hela bygget av oss. Vi håller ihop leverantörerna
             och projektleder från första samtal till att korna står inne.
           </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href="tel:+46703622532"
+              className="inline-flex items-center justify-center gap-3 bg-gb-forest text-white font-bold text-base px-8 py-4 hover:bg-gb-forest-hover transition-colors duration-200"
+            >
+              <Phone size={18} strokeWidth={2.5} />
+              070-362 25 32
+            </a>
+            <Link
+              href="/kontakt"
+              className="inline-flex items-center justify-center gap-3 border-2 border-gb-forest text-gb-forest font-bold text-base px-8 py-4 hover:bg-gb-forest hover:text-white transition-colors duration-200"
+            >
+              Skicka meddelande
+              <ArrowRight size={18} strokeWidth={2.5} />
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -140,20 +156,20 @@ export default function WhatWeDo() {
             ))}
           </div>
 
-          <div className="mt-20 md:mt-24 flex flex-col sm:flex-row gap-5 sm:gap-6">
+          <div className="mt-20 md:mt-24 flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/kontakt"
-              className="inline-flex items-center gap-3 bg-gb-forest text-white font-bold text-base px-8 py-4 hover:bg-gb-forest-hover transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-3 bg-gb-forest text-white font-bold text-base px-8 py-4 hover:bg-gb-forest-hover transition-colors duration-200"
             >
               Få pris på ditt stall
               <ArrowRight size={18} strokeWidth={2.5} />
             </Link>
             <Link
               href="/projekt"
-              className="inline-flex items-center gap-3 text-gb-forest font-bold text-sm md:text-base tracking-wide border-b-2 border-gb-forest pb-1 hover:gap-4 transition-all self-start"
+              className="inline-flex items-center justify-center gap-3 border-2 border-gb-forest text-gb-forest font-bold text-base px-8 py-4 hover:bg-gb-forest hover:text-white transition-colors duration-200"
             >
               Se våra projekt
-              <ArrowRight size={16} strokeWidth={2.5} />
+              <ArrowRight size={18} strokeWidth={2.5} />
             </Link>
           </div>
         </div>

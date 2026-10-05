@@ -77,24 +77,38 @@ export default function Concept() {
       </div>
 
       <div className="max-w-6xl mx-auto px-6">
-        <div className="relative aspect-[16/9] md:aspect-[2/1] overflow-hidden">
-          <Image
-            src="/images/flygfoto/01.jpg"
-            alt="Mjölkkostall på gård"
-            fill
-            className="object-cover"
-            sizes="(max-width: 1200px) 100vw, 1152px"
-          />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+          <div className="relative aspect-[4/3] overflow-hidden">
+            <Image
+              src="/images/flygfoto/01.jpg"
+              alt="Gård före bygget"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <span className="absolute top-4 left-4 bg-white text-gb-ink text-xs font-bold tracking-[0.25em] uppercase px-3 py-1.5">
+              Före
+            </span>
+          </div>
+          <div className="relative aspect-[4/3] overflow-hidden">
+            <Image
+              src="/images/flygfoto/02.jpg"
+              alt="Färdig ladugård på gård"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <span className="absolute top-4 left-4 bg-gb-forest text-white text-xs font-bold tracking-[0.25em] uppercase px-3 py-1.5">
+              Efter
+            </span>
+          </div>
         </div>
       </div>
 
       <div className="max-w-6xl mx-auto px-6 py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14 mb-20 md:mb-28">
           {features.map((f) => (
-            <div key={f.number}>
-              <span className="block text-gb-forest text-sm font-bold tracking-[0.2em] mb-5">
-                {f.number}
-              </span>
+            <div key={f.h}>
               <h3 className="text-gb-ink text-xl md:text-2xl font-extrabold tracking-tight leading-tight mb-3">
                 {f.h}
               </h3>

@@ -20,11 +20,11 @@ export default function HomeForm() {
               du hellre prata direkt går det bra att ringa.
             </p>
             <a
-              href="tel:+46701234567"
+              href="tel:+46703622532"
               className="inline-flex items-center gap-3 bg-gb-forest text-white font-bold text-base px-8 py-4 hover:bg-gb-forest-hover transition-colors duration-200"
             >
               <Phone size={18} strokeWidth={2.5} />
-              070-XXX XX XX
+              070-362 25 32
             </a>
 
             <div className="mt-10 flex items-center gap-4">

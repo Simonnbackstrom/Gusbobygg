@@ -46,29 +46,25 @@ export default function ProjectsDetail() {
   return (
     <section id="projekt" className="bg-white">
       <div className="max-w-6xl mx-auto px-6 py-24 md:py-32">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 mb-20 md:mb-24">
-          <div className="md:col-span-7">
-            <span aria-hidden className="block h-[2px] w-16 bg-gb-forest mb-8" />
-            <h1 className="text-gb-ink text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.02]">
-              Referensprojekt
-              <br />
-              från gårdar vi byggt åt.
-            </h1>
-          </div>
-          <div className="md:col-span-5 flex items-end">
-            <div className="space-y-5 text-gb-slate text-lg leading-[1.7]">
-              <p>
-                Här samlar vi projekt vi tagit ansvar för, från första skiss
-                och ritning till slutbesiktning och överlämning. Varje bygge
-                är olika, men arbetssättet är detsamma: en kontaktpunkt,
-                tydlig tidplan och hantverk som håller.
-              </p>
-              <p>
-                Vi lägger upp fler referenser efterhand. Vill du veta mer om
-                ett specifikt bygge eller höra vad som passar din gård, hör
-                av dig så berättar vi.
-              </p>
-            </div>
+        <div className="max-w-3xl mx-auto text-center mb-20 md:mb-24">
+          <span aria-hidden className="block h-[2px] w-16 bg-gb-forest mx-auto mb-8" />
+          <h1 className="text-gb-ink text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.02] mb-8">
+            Referensprojekt
+            <br />
+            från gårdar vi byggt åt.
+          </h1>
+          <div className="space-y-5 text-gb-slate text-lg leading-[1.7]">
+            <p>
+              Här samlar vi projekt vi tagit ansvar för, från första skiss
+              och ritning till slutbesiktning och överlämning. Varje bygge
+              är olika, men arbetssättet är detsamma: en kontaktpunkt,
+              tydlig tidplan och hantverk som håller.
+            </p>
+            <p>
+              Vi lägger upp fler referenser efterhand. Vill du veta mer om
+              ett specifikt bygge eller höra vad som passar din gård, hör
+              av dig så berättar vi.
+            </p>
           </div>
         </div>
 

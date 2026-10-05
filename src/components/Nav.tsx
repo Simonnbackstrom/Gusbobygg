@@ -27,24 +27,19 @@ export default function Nav() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-[0_2px_12px_rgba(0,0,0,0.08)]">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-4">
+          {/* Logo (liggande variant) */}
+          <Link href="/" aria-label="Gusbo Bygg - startsida" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <Image
               src="/logo-dark.png"
-              alt="Gusbo Bygg"
-              width={96}
-              height={96}
+              alt="Aktiebolaget Gusbo Bygg"
+              width={128}
+              height={128}
               priority
-              className="h-16 w-16 md:h-20 md:w-20 object-contain"
+              className="h-12 w-12 md:h-14 md:w-14 object-contain"
             />
-            <div className="flex flex-col leading-none">
-              <span className="text-gb-ink font-extrabold text-xl md:text-2xl tracking-tight">
-                GUSBO BYGG
-              </span>
-              <span className="hidden sm:inline text-gb-forest text-[11px] font-bold tracking-[0.2em] uppercase mt-1.5">
-                Totalentreprenör
-              </span>
-            </div>
+            <span className="text-gb-ink font-bold text-xl md:text-2xl tracking-tight">
+              GUSBO BYGG
+            </span>
           </Link>
 
           {/* Desktop nav */}
@@ -85,7 +80,7 @@ export default function Nav() {
               )}
             </Link>
             <a
-              href="tel:+46701234567"
+              href="tel:+46703622532"
               className="hidden sm:flex items-center gap-2 bg-gb-forest hover:bg-gb-forest-hover text-white text-sm font-bold px-5 py-2.5 transition-colors duration-200"
             >
               <Phone size={15} strokeWidth={2.5} />
@@ -124,7 +119,7 @@ export default function Nav() {
             ))}
           </nav>
           <a
-            href="tel:+46701234567"
+            href="tel:+46703622532"
             onClick={() => setOpen(false)}
             className="mt-10 inline-flex items-center gap-3 bg-gb-forest text-white font-bold text-base px-8 py-4 self-start"
           >

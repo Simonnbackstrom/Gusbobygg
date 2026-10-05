@@ -1,6 +1,6 @@
 const stats = [
-  { value: "—", label: "Projekt genomförda" },
-  { value: "—", label: "År i branschen" },
+  { value: "-", label: "Projekt genomförda" },
+  { value: "-", label: "År i branschen" },
 ];
 
 export default function Stats() {

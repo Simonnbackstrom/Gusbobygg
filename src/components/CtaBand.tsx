@@ -11,20 +11,20 @@ export default function CtaBand({
   return (
     <section className="bg-gb-cream py-24 md:py-32 border-t border-gb-line">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="max-w-3xl">
-          <span aria-hidden className="block h-[2px] w-16 bg-gb-forest mb-10" />
+        <div className="max-w-3xl mx-auto text-center">
+          <span aria-hidden className="block h-[2px] w-16 bg-gb-forest mx-auto mb-10" />
 
-          <h2 className="text-gb-ink text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.05] mb-10">
+          <h2 className="text-gb-ink text-4xl md:text-5xl font-bold tracking-tight leading-[1.05] mb-10">
             {heading}
           </h2>
 
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="tel:+46701234567"
+              href="tel:+46703622532"
               className="inline-flex items-center justify-center gap-3 bg-gb-forest text-white font-bold text-base px-8 py-4 hover:bg-gb-forest-hover transition-colors duration-200"
             >
               <Phone size={18} strokeWidth={2.5} />
-              070-XXX XX XX
+              070-362 25 32
             </a>
             <Link
               href="/kontakt"

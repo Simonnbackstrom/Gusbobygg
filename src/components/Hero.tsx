@@ -35,7 +35,7 @@ export default function Hero() {
           className="gb-hero-rise text-white/80 text-xl sm:text-2xl font-medium max-w-xl mx-auto mb-12 leading-relaxed"
           style={{ animationDelay: "320ms" }}
         >
-          Och vi vet vad vi gör.
+          Totalentreprenör med rötter i jordbruket.
         </p>
 
         <div
@@ -44,7 +44,7 @@ export default function Hero() {
         >
           <a
             href="tel:+46703622532"
-            className="inline-flex items-center justify-center gap-3 bg-gb-forest text-white font-bold text-base px-8 py-4 hover:bg-gb-forest-hover transition-colors duration-200"
+            className="inline-flex items-center justify-center gap-3 bg-white text-gb-forest font-bold text-base px-8 py-4 hover:bg-gb-cream transition-colors duration-200"
           >
             <Phone size={18} strokeWidth={2.5} />
             Ring oss direkt

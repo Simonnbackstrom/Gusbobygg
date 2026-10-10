@@ -9,7 +9,7 @@ export default function ProjektPage() {
     <main>
       <Nav />
       <div className="pt-32">
-        <Reveal><ProjectsDetail /></Reveal>
+        <ProjectsDetail />
         <Reveal><CtaBand heading="Vill du prata om liknande projekt?" /></Reveal>
       </div>
       <Footer />

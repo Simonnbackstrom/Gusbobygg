@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowRight, MapPin } from "lucide-react";
+import Reveal from "./Reveal";
 
 const projects = [
   {
@@ -38,7 +39,7 @@ export default function Projects() {
   return (
     <section id="projekt" className="bg-white py-24 md:py-32">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
+        <Reveal className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
           <span aria-hidden className="block h-[2px] w-16 bg-gb-forest mx-auto mb-8" />
           <p className="text-gb-forest text-xs font-bold tracking-[0.25em] uppercase mb-5">
             Referensprojekt
@@ -50,12 +51,12 @@ export default function Projects() {
             Varje gård är sin egen plats — men arbetssättet är detsamma. Här är
             några av de bygg­projekt vi driver just nu.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((p, i) => (
+            <Reveal key={p.slug} delay={i * 140} className="block">
             <a
-              key={p.slug}
               href={`/projekt#${p.slug}`}
               className="group block"
             >
@@ -74,6 +75,13 @@ export default function Projects() {
                     0{i + 1} · {p.year}
                   </span>
                 </div>
+                {p.status && (
+                  <div className="absolute top-5 right-5 flex items-center gap-2 bg-gb-forest px-3 py-1.5">
+                    <span className="text-white text-[11px] font-bold tracking-[0.2em] uppercase">
+                      {p.status}
+                    </span>
+                  </div>
+                )}
 
                 <div className="absolute bottom-0 inset-x-0 p-6 md:p-7">
                   <div className="flex items-center gap-2 text-white/80 text-xs font-semibold tracking-wide mb-3">
@@ -112,10 +120,11 @@ export default function Projects() {
                 </span>
               </div>
             </a>
+            </Reveal>
           ))}
         </div>
 
-        <div className="mt-16 md:mt-20 flex flex-col sm:flex-row justify-center items-center gap-4">
+        <Reveal delay={120} className="mt-16 md:mt-20 flex flex-col sm:flex-row justify-center items-center gap-4">
           <a
             href="/projekt"
             className="inline-flex items-center justify-center gap-3 bg-gb-forest text-white font-bold text-base px-8 py-4 hover:bg-gb-forest-hover transition-colors duration-200"
@@ -129,7 +138,7 @@ export default function Projects() {
           >
             Prata med oss
           </a>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

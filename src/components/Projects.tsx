@@ -75,14 +75,6 @@ export default function Projects() {
                     0{i + 1} · {p.year}
                   </span>
                 </div>
-                {p.status && (
-                  <div className="absolute top-5 right-5 flex items-center gap-2 bg-gb-forest px-3 py-1.5">
-                    <span className="text-white text-[11px] font-bold tracking-[0.2em] uppercase">
-                      {p.status}
-                    </span>
-                  </div>
-                )}
-
                 <div className="absolute bottom-0 inset-x-0 p-6 md:p-7">
                   <div className="flex items-center gap-2 text-white/80 text-xs font-semibold tracking-wide mb-3">
                     <MapPin size={13} strokeWidth={2.5} />

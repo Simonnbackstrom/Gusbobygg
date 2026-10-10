@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const pillars = [
   {
@@ -37,48 +37,7 @@ const included = [
 export default function WhatWeDo() {
   return (
     <section id="vad-vi-gor" className="bg-white">
-      <div className="max-w-6xl mx-auto px-6 pt-20 md:pt-28 pb-14 md:pb-16">
-        <div className="max-w-3xl mx-auto text-center">
-          <span aria-hidden className="block h-[2px] w-16 bg-gb-forest mx-auto mb-8" />
-          <h1 className="text-gb-ink text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.02] mb-8">
-            Så funkar det.
-          </h1>
-          <p className="text-gb-slate text-xl md:text-2xl leading-[1.5] mb-10">
-            Du köper hela bygget av oss. Vi håller ihop leverantörerna
-            och projektleder från första samtal till att korna står inne.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
-              href="tel:+46703622532"
-              className="inline-flex items-center justify-center gap-3 bg-gb-forest text-white font-bold text-base px-8 py-4 hover:bg-gb-forest-hover transition-colors duration-200"
-            >
-              <Phone size={18} strokeWidth={2.5} />
-              070-362 25 32
-            </a>
-            <Link
-              href="/kontakt"
-              className="inline-flex items-center justify-center gap-3 border-2 border-gb-forest text-gb-forest font-bold text-base px-8 py-4 hover:bg-gb-forest hover:text-white transition-colors duration-200"
-            >
-              Skicka meddelande
-              <ArrowRight size={18} strokeWidth={2.5} />
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      <div className="max-w-6xl mx-auto px-6 pb-20 md:pb-24">
-        <div className="relative aspect-[16/9] md:aspect-[2/1] overflow-hidden">
-          <Image
-            src="/images/flygfoto/hero.jpg"
-            alt="Mjölkkostall och gårdsmiljö"
-            fill
-            className="object-cover"
-            sizes="(max-width: 1200px) 100vw, 1152px"
-          />
-        </div>
-      </div>
-
-      <div className="bg-gb-cream border-t border-gb-line">
+      <div className="bg-gb-cream">
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
           <div className="max-w-2xl mb-12 md:mb-14">
             <span aria-hidden className="block h-[2px] w-16 bg-gb-forest mb-8" />

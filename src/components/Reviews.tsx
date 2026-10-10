@@ -49,7 +49,7 @@ export default function Reviews() {
                   <Star
                     key={idx}
                     size={18}
-                    className="fill-gb-forest text-gb-forest"
+                    className="fill-amber-400 text-amber-400"
                   />
                 ))}
               </div>

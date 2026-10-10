@@ -19,17 +19,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           {/* Col 1: Company info */}
           <div>
-            <Link href="/" aria-label="Gusbo Bygg - startsida" className="inline-flex items-center gap-3 mb-6 hover:opacity-80 transition-opacity">
+            <Link href="/" aria-label="Gusbo Bygg - startsida" className="inline-block mb-6 hover:opacity-80 transition-opacity">
               <Image
-                src="/logo-dark.png"
+                src="/logo-liggande.png"
                 alt="Aktiebolaget Gusbo Bygg"
-                width={96}
-                height={96}
-                className="h-12 w-12 object-contain"
+                width={1550}
+                height={384}
+                className="h-11 w-auto object-contain"
               />
-              <span className="text-gb-ink font-bold text-xl tracking-tight">
-                GUSBO BYGG
-              </span>
             </Link>
             <p className="text-gb-slate text-sm leading-relaxed mb-6">
               Totalentreprenör inom djurstallar och lantbruksbyggnader. Rötter

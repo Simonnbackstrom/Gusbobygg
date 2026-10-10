@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { Phone, Menu, X } from "lucide-react";
 
 const primaryLinks = [
-  { label: "Så funkar det", href: "/vad-vi-gor" },
+  { label: "Vad vi bygger", href: "/vad-vi-gor" },
   { label: "Om oss", href: "/varfor-gusbo" },
   { label: "Projekt", href: "/projekt" },
 ];
@@ -27,19 +27,16 @@ export default function Nav() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-[0_2px_12px_rgba(0,0,0,0.08)]">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          {/* Logo (liggande variant) */}
-          <Link href="/" aria-label="Gusbo Bygg - startsida" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          {/* Logo (liggande variant, från varumärkesprofilen) */}
+          <Link href="/" aria-label="Gusbo Bygg - startsida" className="hover:opacity-80 transition-opacity">
             <Image
-              src="/logo-dark.png"
+              src="/logo-liggande.png"
               alt="Aktiebolaget Gusbo Bygg"
-              width={128}
-              height={128}
+              width={1550}
+              height={384}
               priority
-              className="h-12 w-12 md:h-14 md:w-14 object-contain"
+              className="h-10 md:h-12 w-auto object-contain"
             />
-            <span className="text-gb-ink font-bold text-xl md:text-2xl tracking-tight">
-              GUSBO BYGG
-            </span>
           </Link>
 
           {/* Desktop nav */}

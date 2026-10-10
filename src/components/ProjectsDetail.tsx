@@ -3,40 +3,44 @@ import { ArrowRight } from "lucide-react";
 
 const projects = [
   {
+    slug: "mjolkladugard-edsbyn",
     label: "Projekt 01",
-    title: "Ny ladugård utanför Kilafors",
-    location: "Kilafors",
-    year: "2025",
-    category: "Ladugård",
+    title: "Mjölkladugård för fyra robotar i Edsbyn",
+    location: "Edsbyn",
+    year: "2026",
+    category: "Mjölkladugård",
     scope: "Totalentreprenad",
     facts: [
-      { label: "Byggnad", value: "Ladugård" },
-      { label: "Yta", value: "ca 2 400 m²" },
-      { label: "År", value: "2025" },
-      { label: "Omfattning", value: "Nyckelfärdigt" },
+      { label: "Byggnad", value: "Mjölkladugård" },
+      { label: "Robotar", value: "Fyra" },
+      { label: "Stomme", value: "Betong" },
+      { label: "År", value: "2026" },
+      { label: "Omfattning", value: "Totalentreprenad" },
     ],
     body: [
-      "En ny ladugård byggd från grunden åt en mjölkgård i Kilafors. Vi tog över hela projektet. Markarbete, betong, stomme och installationer. Bonden kunde fokusera på drift och djur under bygget.",
-      "Stallet är planerat för robotmjölkning med genomtänkta flöden för foder, gödsel och personal. Ventilation och belysning är dimensionerade efter djurantal och rutiner, och materialvalet är gjort för att klara många år av dagligt slitage.",
+      "En ny mjölkladugård byggd från grunden åt en gård i Edsbyn. Stommen är i betong och stallet är dimensionerat för fyra robotar, med flöden för foder, gödsel och personal planerade utifrån hur arbetet ser ut i vardagen.",
+      "Vi tog hela entreprenaden och samordnade VVS och el genom bygget. En kontaktpunkt mot gården, en tydlig tidplan och installationer som greppar in i varandra från första dagen.",
     ],
     img: "/images/flygfoto/01.jpg",
   },
   {
+    slug: "ungdjurstall-kilafors",
     label: "Projekt 02",
-    title: "Djurstall i Bollnäs",
-    location: "Bollnäs",
-    year: "2025",
-    category: "Djurstall",
+    title: "Ungdjurstall med automatisk kalvamma i Kilafors",
+    location: "Kilafors",
+    year: "2026",
+    category: "Ungdjurstall",
     scope: "Totalentreprenad",
     facts: [
-      { label: "Byggnad", value: "Djurstall" },
-      { label: "Yta", value: "ca 1 800 m²" },
-      { label: "År", value: "2025" },
-      { label: "Omfattning", value: "Nyckelfärdigt" },
+      { label: "Byggnad", value: "Ungdjurstall" },
+      { label: "Platser", value: "56 ungdjur" },
+      { label: "Utrustning", value: "Automatisk kalvamma" },
+      { label: "År", value: "2026" },
+      { label: "Omfattning", value: "Totalentreprenad" },
     ],
     body: [
-      "Ett nytt djurstall åt en gård utanför Bollnäs. Byggnaden är ritad utifrån hur besättningen rör sig genom stallet, med breda gångar, tydliga zoner och god ventilation.",
-      "Vi stod för hela entreprenaden, från grundläggning till färdig anläggning. Vi samordnade underentreprenörer så att gården hade en kontaktpunkt genom hela projektet.",
+      "Ett ungdjurstall utanför Kilafors med plats för 56 ungdjur. Stallet är planerat kring en automatisk kalvamma, med flöden och boxar anpassade för att djuren ska kunna gå lugnt och säkert mellan utfodring, vila och skötsel.",
+      "Vi stod för hela entreprenaden, från grundläggning till färdig anläggning, och samordnade underentreprenörer så att gården hade en kontaktpunkt genom hela projektet.",
     ],
     img: "/images/flygfoto/hero.jpg",
   },
@@ -70,7 +74,7 @@ export default function ProjectsDetail() {
 
         <div className="space-y-24 md:space-y-32">
           {projects.map((p) => (
-            <article key={p.label}>
+            <article key={p.label} id={p.slug} className="scroll-mt-24">
               <div className="relative overflow-hidden bg-gb-ink aspect-[16/9] mb-10 md:mb-12">
                 <Image
                   src={p.img}

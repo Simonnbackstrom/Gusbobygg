@@ -19,11 +19,17 @@ export default function Hero() {
 
       <div className="relative max-w-6xl mx-auto px-6 pt-32 pb-24 w-full text-center">
         <h1
-          className="gb-hero-rise text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.05] tracking-tight mb-8 md:whitespace-nowrap"
+          className="gb-hero-rise text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.05] tracking-tight mb-6 md:whitespace-nowrap"
           style={{ animationDelay: "120ms" }}
         >
           Vi bygger ladugårdar åt bönder.
         </h1>
+
+        <span
+          className="gb-hero-rise block w-16 h-0.5 bg-gb-forest mx-auto mb-6"
+          style={{ animationDelay: "220ms" }}
+          aria-hidden
+        />
 
         <p
           className="gb-hero-rise text-white/80 text-xl sm:text-2xl font-medium max-w-xl mx-auto mb-12 leading-relaxed"

@@ -92,7 +92,7 @@ export default function Concept() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden">
             <Image
-              src="/images/flygfoto/02.jpg"
+              src="/images/flygfoto/fardigt-stall.jpg"
               alt="Färdig ladugård på gård"
               fill
               className="object-cover"

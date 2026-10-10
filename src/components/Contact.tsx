@@ -60,52 +60,40 @@ export default function Contact() {
               encType="text/plain"
               className="flex flex-col gap-5"
             >
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div className="flex flex-col gap-2">
-                  <label className="text-gb-mint text-xs font-bold tracking-[0.12em] uppercase">
-                    Namn
-                  </label>
-                  <input
-                    type="text"
-                    name="namn"
-                    placeholder="Anders Karlsson"
-                    required
-                    className="bg-white/10 border border-white/20 text-white placeholder:text-white/30 px-4 py-3 text-sm focus:outline-none focus:border-white/60 transition-colors"
-                  />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-gb-mint text-xs font-bold tracking-[0.12em] uppercase">
-                    Telefon
-                  </label>
-                  <input
-                    type="tel"
-                    name="telefon"
-                    placeholder="070-XXX XX XX"
-                    className="bg-white/10 border border-white/20 text-white placeholder:text-white/30 px-4 py-3 text-sm focus:outline-none focus:border-white/60 transition-colors"
-                  />
-                </div>
-              </div>
-
               <div className="flex flex-col gap-2">
                 <label className="text-gb-mint text-xs font-bold tracking-[0.12em] uppercase">
-                  E-post
+                  Namn
                 </label>
                 <input
-                  type="email"
-                  name="epost"
-                  placeholder="anders@gard.se"
+                  type="text"
+                  name="namn"
+                  placeholder="Anders Karlsson"
+                  required
                   className="bg-white/10 border border-white/20 text-white placeholder:text-white/30 px-4 py-3 text-sm focus:outline-none focus:border-white/60 transition-colors"
                 />
               </div>
 
               <div className="flex flex-col gap-2">
                 <label className="text-gb-mint text-xs font-bold tracking-[0.12em] uppercase">
-                  Vad ska du bygga?
+                  Telefon
+                </label>
+                <input
+                  type="tel"
+                  name="telefon"
+                  placeholder="070-XXX XX XX"
+                  required
+                  className="bg-white/10 border border-white/20 text-white placeholder:text-white/30 px-4 py-3 text-sm focus:outline-none focus:border-white/60 transition-colors"
+                />
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <label className="text-gb-mint text-xs font-bold tracking-[0.12em] uppercase">
+                  Berätta kort om bygget
                 </label>
                 <textarea
                   name="meddelande"
-                  rows={5}
-                  placeholder="Berätta kort om ditt projekt, typ av stall, ungefärlig storlek och tidplan om du vet."
+                  rows={4}
+                  placeholder="Typ av stall, antal djur och ungefärlig tidplan om du vet."
                   className="bg-white/10 border border-white/20 text-white placeholder:text-white/30 px-4 py-3 text-sm focus:outline-none focus:border-white/60 transition-colors resize-none"
                 />
               </div>
@@ -116,6 +104,9 @@ export default function Contact() {
               >
                 Skicka meddelande
               </button>
+              <p className="text-gb-mint/70 text-xs">
+                Vi återkommer inom ett par dagar.
+              </p>
             </form>
           </div>
         </div>

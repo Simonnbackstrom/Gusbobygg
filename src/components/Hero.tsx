@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -50,11 +50,10 @@ export default function Hero() {
             <ArrowRight size={18} strokeWidth={2.5} className="transition-transform duration-300 ease-out group-hover:translate-x-1" />
           </a>
           <a
-            href="tel:+46703622532"
+            href="/vad-vi-gor"
             className="inline-flex items-center justify-center gap-3 border-2 border-white/50 text-white font-semibold text-base px-8 py-4 hover:border-white hover:bg-white/5 hover:-translate-y-0.5 transition-all duration-300 ease-out"
           >
-            <Phone size={18} strokeWidth={2.5} />
-            Ring oss 070-362 25 32
+            Så jobbar vi
           </a>
         </div>
 

@@ -106,7 +106,7 @@ export default function Nav() {
               className="flex items-center gap-2 text-sm font-bold px-3 py-2.5 sm:px-5 bg-gb-forest hover:bg-gb-forest-hover text-white transition-colors duration-200"
             >
               <Phone size={15} strokeWidth={2.5} />
-              <span className="hidden sm:inline">Ring oss</span>
+              <span>Ring oss</span>
             </a>
             <button
               onClick={() => setOpen((v) => !v)}

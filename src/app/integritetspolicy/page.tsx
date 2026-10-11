@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import PageHeader from "@/components/PageHeader";
 import Footer from "@/components/Footer";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Integritetspolicy",
@@ -41,7 +42,7 @@ const sections = [
   {
     h: "Hur länge vi sparar uppgifterna",
     body: [
-      "Förfrågningar som inte leder till avtal gallras senast 24 månader efter sista kontakt. Uppgifter kopplade till ett kundavtal sparas så länge avtalet löper och därefter så länge det krävs enligt gällande lag — normalt sju år enligt bokföringslagen.",
+      "Förfrågningar som inte leder till avtal gallras senast 24 månader efter sista kontakt. Uppgifter kopplade till ett kundavtal sparas så länge avtalet löper och därefter så länge det krävs enligt gällande lag. Normalt sju år enligt bokföringslagen.",
     ],
   },
   {
@@ -84,17 +85,17 @@ export default function IntegritetspolicyPage() {
       <section className="bg-white">
         <div className="max-w-3xl mx-auto px-6 py-20 md:py-28">
           <div className="space-y-14 md:space-y-16">
-            {sections.map((s) => (
-              <div key={s.h}>
+            {sections.map((s, i) => (
+              <Reveal key={s.h} delay={i * 60}>
                 <h2 className="text-gb-ink text-2xl md:text-3xl font-extrabold tracking-tight leading-tight mb-5">
                   {s.h}
                 </h2>
                 <div className="space-y-4 text-gb-slate text-base md:text-lg leading-[1.7]">
-                  {s.body.map((p, i) => (
-                    <p key={i}>{p}</p>
+                  {s.body.map((p, idx) => (
+                    <p key={idx}>{p}</p>
                   ))}
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
           <p className="mt-16 text-gb-muted text-xs">

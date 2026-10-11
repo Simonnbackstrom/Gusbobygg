@@ -7,14 +7,14 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Kontakt — prata med oss om ditt ladugårdsbygge",
+  title: "Kontakt. Prata med oss om ditt ladugårdsbygge",
   description:
     "Ring, mejla eller skicka ett meddelande så hör vi av oss inom ett par dagar. Totalentreprenör för djurstallar i Hälsingland och Gästrikland.",
   alternates: { canonical: "/kontakt" },
   openGraph: {
     title: "Kontakt | Gusbo Bygg",
     description:
-      "Ring, mejla eller skicka meddelande — vi återkommer inom ett par dagar.",
+      "Ring, mejla eller skicka meddelande. Vi återkommer inom ett par dagar.",
     url: "/kontakt",
     type: "website",
   },

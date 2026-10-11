@@ -7,12 +7,12 @@ export default function Statement() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
           <div className="md:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden bg-gb-ink">
+            <div className="relative aspect-[4/5] overflow-hidden bg-gb-ink group">
               <Image
                 src="/images/team/edvin.jpg"
                 alt="Edvin Säll, grundare av Gusbo Bygg"
                 fill
-                className="object-cover"
+                className="object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                 sizes="(max-width: 768px) 100vw, 40vw"
               />
               <div aria-hidden className="absolute -bottom-1 -left-1 right-10 h-1 bg-gb-forest" />
@@ -38,7 +38,7 @@ export default function Statement() {
 
             <p className="text-gb-ink/75 text-base md:text-lg leading-[1.6] mt-5">
               Vi är själva uppvuxna på gård och vet hur en ladugård fungerar
-              från insidan — var mjölkroboten står, hur fodret hittar in, hur
+              från insidan. Var mjölkroboten står, hur fodret hittar in, hur
               en besättning rör sig. Den kunskapen låter sig inte hyras in.
             </p>
             <p className="text-gb-ink/75 text-base md:text-lg leading-[1.6] mt-4">

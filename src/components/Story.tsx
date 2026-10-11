@@ -11,12 +11,12 @@ export default function Story({ cta }: StoryProps = {}) {
     <section className="bg-gb-cream py-24 md:py-32 overflow-hidden border-t border-gb-line">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
-          <div className="md:col-span-5 relative aspect-[3/4] md:aspect-[3/4]">
+          <div className="md:col-span-5 relative aspect-[3/4] md:aspect-[3/4] overflow-hidden group">
             <Image
               src="/images/team/edvin.jpg"
               alt="Edvin Säll, Gusbo Bygg"
               fill
-              className="object-cover"
+              className="object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
               sizes="(max-width: 768px) 100vw, 40vw"
             />
             <div className="absolute -bottom-1 -left-1 right-6 h-1 bg-gb-forest" />
@@ -31,7 +31,7 @@ export default function Story({ cta }: StoryProps = {}) {
             <div className="space-y-5 text-gb-ink/75 text-lg leading-relaxed">
               <p>
                 Emblemet på jackan kommer från gården. Det är inte en logotyp
-                vi fick av en designer — det är var vi växte upp. Allt vi
+                vi fick av en designer. Det är var vi växte upp. Allt vi
                 bygger är format av arbetet i stall, skiften och ladugårdar
                 snarare än på ritbordet.
               </p>

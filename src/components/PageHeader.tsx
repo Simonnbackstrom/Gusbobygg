@@ -44,8 +44,8 @@ export default function PageHeader({
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-gb-ink/85 via-gb-ink/50 to-gb-ink/25" />
-          <div className="absolute inset-0 bg-gb-forest/20 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-t from-gb-ink/95 via-gb-ink/75 to-gb-ink/50" />
+          <div className="absolute inset-0 bg-gb-forest/30 mix-blend-multiply" />
         </>
       )}
 

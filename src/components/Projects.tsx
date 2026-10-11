@@ -48,7 +48,7 @@ export default function Projects() {
             Bygget talar för sig självt.
           </h2>
           <p className="text-gb-slate text-lg leading-relaxed">
-            Varje gård är sin egen plats — men arbetssättet är detsamma. Här är
+            Varje gård är sin egen plats, men arbetssättet är detsamma. Här är
             några av de bygg­projekt vi driver just nu.
           </p>
         </Reveal>

@@ -1,4 +1,6 @@
-import { Quote, Star } from "lucide-react";
+import Link from "next/link";
+import { Quote, Star, ArrowRight } from "lucide-react";
+import Reveal from "./Reveal";
 
 const reviews = [
   {
@@ -33,11 +35,11 @@ export default function Reviews() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20">
           {reviews.map((r, i) => (
+            <Reveal key={i} delay={i * 100} className="flex">
             <figure
-              key={i}
-              className="bg-white border border-gb-line p-10 md:p-12 flex flex-col"
+              className="bg-white border border-gb-line p-10 md:p-12 flex flex-col w-full"
             >
               <Quote
                 size={36}
@@ -61,7 +63,18 @@ export default function Reviews() {
                 <p className="text-gb-slate text-sm mt-1">{r.role}</p>
               </figcaption>
             </figure>
+            </Reveal>
           ))}
+        </div>
+
+        <div className="flex justify-center">
+          <Link
+            href="/kontakt"
+            className="inline-flex items-center justify-center gap-3 bg-gb-forest text-white font-bold text-base px-8 py-4 hover:bg-gb-forest-hover transition-colors duration-200"
+          >
+            Kontakta oss
+            <ArrowRight size={18} strokeWidth={2.5} />
+          </Link>
         </div>
       </div>
     </section>

@@ -11,14 +11,14 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Om Gusbo Bygg — rötter i jordbruket, hantverk som håller",
+  title: "Om Gusbo Bygg. Rötter i jordbruket, hantverk som håller",
   description:
     "Vi är ett byggföretag med rötter i jordbruket. Här är historien, laget och varför bönder väljer att bygga med oss.",
   alternates: { canonical: "/varfor-gusbo" },
   openGraph: {
     title: "Om Gusbo Bygg | Gusbo Bygg",
     description:
-      "Byggföretag med rötter i jordbruket — vårt lag, vår historia och vårt arbetssätt.",
+      "Byggföretag med rötter i jordbruket. Vårt lag, vår historia och vårt arbetssätt.",
     url: "/varfor-gusbo",
     type: "website",
   },
@@ -29,8 +29,8 @@ export default function VarforGusboPage() {
     <main>
       <Nav />
       <PageHeader
-        image="/images/team/edvin.jpg"
-        imageAlt="Edvin Säll, grundare av Gusbo Bygg"
+        image="/images/flygfoto/04.jpg"
+        imageAlt="Gård och landskap i Hälsingland"
         priority
         eyebrow="Om oss"
         title={

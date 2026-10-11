@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Reveal from "./Reveal";
 
 const pillars = [
   {
@@ -51,20 +52,19 @@ export default function WhatWeDo() {
 
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-5">
             {included.map((item, i) => (
-              <li
-                key={item.label}
-                className="bg-white border border-gb-line p-6 md:p-7"
-              >
-                <span className="block text-gb-forest text-sm font-bold tabular-nums tracking-[0.2em] mb-4">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h3 className="text-gb-ink text-xl md:text-2xl font-extrabold tracking-tight mb-2">
-                  {item.label}
-                </h3>
-                <p className="text-gb-slate text-sm md:text-base leading-[1.6]">
-                  {item.desc}
-                </p>
-              </li>
+              <Reveal key={item.label} delay={i * 80} className="flex">
+                <li className="bg-white border border-gb-line p-6 md:p-7 w-full">
+                  <span className="block text-gb-forest text-sm font-bold tabular-nums tracking-[0.2em] mb-4">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="text-gb-ink text-xl md:text-2xl font-extrabold tracking-tight mb-2">
+                    {item.label}
+                  </h3>
+                  <p className="text-gb-slate text-sm md:text-base leading-[1.6]">
+                    {item.desc}
+                  </p>
+                </li>
+              </Reveal>
             ))}
           </ul>
         </div>
@@ -84,12 +84,13 @@ export default function WhatWeDo() {
 
           <div className="space-y-20 md:space-y-28">
             {pillars.map((p, i) => (
-              <div
+              <Reveal
                 key={p.number}
+                delay={i * 100}
                 className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center"
               >
                 <div
-                  className={`md:col-span-6 relative aspect-[4/3] overflow-hidden ${
+                  className={`md:col-span-6 relative aspect-[4/3] overflow-hidden group ${
                     i % 2 === 1 ? "md:order-2" : ""
                   }`}
                 >
@@ -97,7 +98,7 @@ export default function WhatWeDo() {
                     src={p.img}
                     alt={p.alt}
                     fill
-                    className="object-cover"
+                    className={`object-cover group-hover:scale-105 transition-transform duration-700 ease-out ${p.number === "03" ? "object-top" : ""}`}
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
@@ -111,7 +112,7 @@ export default function WhatWeDo() {
                   </h3>
                   <p className="text-gb-slate text-lg leading-[1.7]">{p.p}</p>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
 

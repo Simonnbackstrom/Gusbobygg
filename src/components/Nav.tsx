@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { Phone, Menu, X } from "lucide-react";
 
 const primaryLinks = [
-  { label: "Vad vi bygger", href: "/vad-vi-gor" },
+  { label: "Så bygger vi", href: "/vad-vi-gor" },
   { label: "Om oss", href: "/varfor-gusbo" },
   { label: "Projekt", href: "/projekt" },
 ];

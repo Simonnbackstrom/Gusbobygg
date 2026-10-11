@@ -159,7 +159,7 @@ export default function Concept() {
             <ArrowRight size={18} strokeWidth={2.5} />
           </a>
           <Link
-            href="/vad-vi-gor#process"
+            href="/vad-vi-gor"
             className="inline-flex items-center gap-3 text-gb-forest font-bold text-sm md:text-base tracking-wide border-b-2 border-gb-forest pb-1 hover:gap-4 transition-all"
           >
             Läs mer om processen

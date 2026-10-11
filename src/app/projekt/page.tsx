@@ -7,12 +7,12 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Referensprojekt — ladugårdar och djurstallar vi byggt",
+  title: "Referensprojekt. Ladugårdar och djurstallar vi byggt",
   description:
     "Mjölkladugårdar och ungdjurstall vi tagit totalansvar för i Hälsingland och Gästrikland. Från ritning till inflytt, en kontaktpunkt genom hela bygget.",
   alternates: { canonical: "/projekt" },
   openGraph: {
-    title: "Referensprojekt — ladugårdar och djurstallar | Gusbo Bygg",
+    title: "Referensprojekt. Ladugårdar och djurstallar | Gusbo Bygg",
     description:
       "Mjölkladugårdar och ungdjurstall vi byggt i Hälsingland och Gästrikland.",
     url: "/projekt",

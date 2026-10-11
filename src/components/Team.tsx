@@ -1,32 +1,5 @@
 import Image from "next/image";
 
-const team = [
-  {
-    id: "platschef",
-    name: "Namn Efternamn",
-    role: "Platschef",
-    bio: "Håller ihop leverantörerna på plats. Ser till att tidplanen håller.",
-    img: "/images/team/team.jpg",
-    position: "15% center",
-  },
-  {
-    id: "edvin",
-    name: "Edvin Säll",
-    role: "Grundare & projektledare",
-    bio: "Uppvuxen på gård. Driver bygget från första samtal till överlämning.",
-    img: "/images/team/edvin.jpg",
-    position: "center",
-  },
-  {
-    id: "byggledare",
-    name: "Namn Efternamn",
-    role: "Byggledare",
-    bio: "Erfaren byggare med rötter i jordbruket. Kvalitetssäkrar varje moment.",
-    img: "/images/team/team.jpg",
-    position: "85% center",
-  },
-];
-
 export default function Team() {
   return (
     <section className="bg-white py-24 md:py-32 border-t border-gb-line">
@@ -42,29 +15,32 @@ export default function Team() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10">
-          {team.map((m) => (
-            <div key={m.id} className="flex flex-col">
-              <div className="relative aspect-[3/4] overflow-hidden mb-6">
-                <Image
-                  src={m.img}
-                  alt={m.name}
-                  fill
-                  className="object-cover"
-                  style={{ objectPosition: m.position }}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-                <div className="absolute -bottom-1 -left-1 right-6 h-1 bg-gb-forest" />
-              </div>
-              <h3 className="text-gb-ink text-xl md:text-2xl font-bold tracking-tight leading-tight mb-1">
-                {m.name}
-              </h3>
-              <p className="text-gb-forest text-xs font-bold tracking-[0.15em] uppercase mb-3">
-                {m.role}
-              </p>
-              <p className="text-gb-slate text-base leading-[1.6]">{m.bio}</p>
-            </div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-14 items-center max-w-4xl mx-auto">
+          <div className="md:col-span-5 relative aspect-[3/4] overflow-hidden group">
+            <Image
+              src="/images/team/edvin.jpg"
+              alt="Edvin Säll"
+              fill
+              className="object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+              sizes="(max-width: 768px) 100vw, 40vw"
+            />
+            <div className="absolute -bottom-1 -left-1 right-6 h-1 bg-gb-forest" />
+          </div>
+
+          <div className="md:col-span-7">
+            <h3 className="text-gb-ink text-2xl md:text-3xl font-bold tracking-tight leading-tight mb-1">
+              Edvin Säll
+            </h3>
+            <p className="text-gb-forest text-xs font-bold tracking-[0.15em] uppercase mb-5">
+              Grundare & projektledare
+            </p>
+            <p className="text-gb-slate text-lg leading-[1.7]">
+              Uppvuxen på gård och med hantverket i blodet. Edvin driver varje
+              bygge från första samtalet till överlämningen. En kontakt hela
+              vägen, någon som vet var projektet står och som förstår hur en
+              gård faktiskt fungerar.
+            </p>
+          </div>
         </div>
       </div>
     </section>

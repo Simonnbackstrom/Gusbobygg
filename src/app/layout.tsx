@@ -15,7 +15,7 @@ const SITE_NAME = "Gusbo Bygg";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Gusbo Bygg — Totalentreprenör inom djurstallar och lantbruk",
+    default: "Gusbo Bygg. Totalentreprenör inom djurstallar och lantbruk",
     template: "%s | Gusbo Bygg",
   },
   description:
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     locale: "sv_SE",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: "Gusbo Bygg — Totalentreprenör inom djurstallar och lantbruk",
+    title: "Gusbo Bygg. Totalentreprenör inom djurstallar och lantbruk",
     description:
       "Vi bygger ladugårdar åt bönder. Totalentreprenör med rötter i jordbruket.",
     images: [
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gusbo Bygg — Totalentreprenör inom djurstallar och lantbruk",
+    title: "Gusbo Bygg. Totalentreprenör inom djurstallar och lantbruk",
     description:
       "Vi bygger ladugårdar åt bönder. Totalentreprenör med rötter i jordbruket.",
     images: ["/images/flygfoto/hero.jpg"],

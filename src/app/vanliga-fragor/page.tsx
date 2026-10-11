@@ -9,12 +9,12 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Vanliga frågor om att bygga ladugård",
   description:
-    "Svar på det bönder brukar fråga Gusbo Bygg först — om pris, tidplan, bygglov, mark, finansiering och totalentreprenad för djurstallar och lantbruksbyggnader.",
+    "Svar på det bönder brukar fråga Gusbo Bygg först. Om pris, tidplan, bygglov, mark, finansiering och totalentreprenad för djurstallar och lantbruksbyggnader.",
   alternates: { canonical: "/vanliga-fragor" },
   openGraph: {
     title: "Vanliga frågor om att bygga ladugård | Gusbo Bygg",
     description:
-      "Svar på det bönder brukar fråga oss först — pris, tidplan, bygglov, mark, finansiering och totalentreprenad.",
+      "Svar på det bönder brukar fråga oss först. Pris, tidplan, bygglov, mark, finansiering och totalentreprenad.",
     url: "/vanliga-fragor",
     type: "website",
   },
@@ -46,7 +46,7 @@ export default function VanligaFragorPage() {
             fråga oss först.
           </>
         }
-        lead="Hittar du inte svaret? Ring eller mejla — vi återkommer inom ett par dagar."
+        lead="Hittar du inte svaret? Ring eller mejla. Vi återkommer inom ett par dagar."
       />
       <Faq />
       <Reveal>

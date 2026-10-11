@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Phone, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Nav from "@/components/Nav";
 import PageHeader from "@/components/PageHeader";
 import WhatWeDo from "@/components/WhatWeDo";
@@ -11,14 +11,14 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Vad vi bygger — ladugårdar, djurstallar och lantbruksbyggnader",
+  title: "Vad vi bygger. Ladugårdar, djurstallar och lantbruksbyggnader",
   description:
     "Mjölkladugårdar, ungdjurstall, maskinhallar och om- och tillbyggnader. Totalentreprenad med en kontaktpunkt från ritning till inflytt.",
   alternates: { canonical: "/vad-vi-gor" },
   openGraph: {
     title: "Vad vi bygger | Gusbo Bygg",
     description:
-      "Ladugårdar, djurstallar och lantbruksbyggnader — totalentreprenad från ritning till inflytt.",
+      "Ladugårdar, djurstallar och lantbruksbyggnader. Totalentreprenad från ritning till inflytt.",
     url: "/vad-vi-gor",
     type: "website",
   },
@@ -32,32 +32,17 @@ export default function VadViGorPage() {
         image="/images/flygfoto/hero.jpg"
         imageAlt="Gårdsmiljö med ladugård och silo"
         priority
-        eyebrow="Vad vi bygger"
-        title={
-          <>
-            Ladugårdar och djurstallar
-            <br />
-            från ritning till inflytt.
-          </>
-        }
-        lead="Mjölkladugårdar, ungdjurstall och om- och tillbyggnader. Du köper hela bygget av oss — en kontakt, ett avtal, från första samtalet till att korna står inne."
+        eyebrow="Så bygger vi"
+        title="Totalentreprenör för ditt nya kostall."
+        lead="Vi bygger ditt kostall efter ett beprövat koncept. Från första ritning till den dag korna står inne. En kontakt, ett avtal, hela vägen."
         cta={
-          <div className="flex flex-col sm:flex-row gap-3">
-            <a
-              href="tel:+46703622532"
-              className="inline-flex items-center justify-center gap-3 bg-white text-gb-forest font-bold text-base px-8 py-4 hover:bg-gb-cream transition-colors duration-200"
-            >
-              <Phone size={18} strokeWidth={2.5} />
-              070-362 25 32
-            </a>
-            <Link
-              href="/kontakt"
-              className="inline-flex items-center justify-center gap-3 border-2 border-white/60 text-white font-bold text-base px-8 py-4 hover:bg-white/10 hover:border-white transition-colors duration-200"
-            >
-              Skicka meddelande
-              <ArrowRight size={18} strokeWidth={2.5} />
-            </Link>
-          </div>
+          <Link
+            href="/kontakt"
+            className="inline-flex items-center justify-center gap-3 bg-white text-gb-forest font-bold text-base px-8 py-4 hover:bg-gb-cream transition-colors duration-200"
+          >
+            Kontakta oss
+            <ArrowRight size={18} strokeWidth={2.5} />
+          </Link>
         }
       />
       <Reveal><WhatWeDo /></Reveal>

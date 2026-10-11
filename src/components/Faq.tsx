@@ -4,18 +4,18 @@ import Reveal from "./Reveal";
 export const faqs = [
   {
     q: "Vad kostar det ungefär att bygga en ladugård?",
-    a: "Priset beror på djurantal, utrustning, markförhållanden och val av stomme. När vi varit på plats och vet dina planer kan vi ge ett fast pris på hela bygget — ibland redan på första mötet.",
+    a: "Priset beror på djurantal, utrustning, markförhållanden och val av stomme. När vi varit på plats och vet dina planer kan vi ge ett fast pris på hela bygget. Ibland redan på första mötet.",
   },
   {
     q: "Hur lång tid tar hela processen, från första samtalet till inflytt?",
-    a: "Från ritning till färdigt stall ligger de flesta bygg­projekt på 10–16 månader beroende på storlek, bygglov och markarbete. Vi lägger upp en tidplan tidigt och håller den — avvikelser ska du få veta om direkt, inte i efterhand.",
+    a: "Från ritning till färdigt stall ligger de flesta bygg­projekt på 10–16 månader beroende på storlek, bygglov och markarbete. Vi lägger upp en tidplan tidigt och håller den. Avvikelser ska du få veta om direkt, inte i efterhand.",
   },
   {
     q: "Vem söker bygglov och sköter alla tillstånd?",
     a: "Det gör vi. I projekteringen samlar vi ihop ritningar, markundersökningar, bygglov och eventuella djurskydds­anmälningar. Du behöver inte jaga papper själv.",
   },
   {
-    q: "Hur fungerar totalentreprenad — vad ingår egentligen?",
+    q: "Hur fungerar totalentreprenad, vad ingår egentligen?",
     a: "Du får en kontaktpunkt och ett pris för hela bygget. Mark, platta, stomme, VVS, el och installationer. Vi anlitar och styr alla leverantörer och tar helhetsansvaret mot dig.",
   },
   {
@@ -36,7 +36,7 @@ export const faqs = [
   },
   {
     q: "Hur hanterar ni leverantörer och underentreprenörer?",
-    a: "Varje leverantör har sin egen arbetsledare på plats, och vi projektleder helheten. Du har en person att ringa — vi håller ihop resten.",
+    a: "Varje leverantör har sin egen arbetsledare på plats, och vi projektleder helheten. Du har en person att ringa. Vi håller ihop resten.",
   },
   {
     q: "Vad händer om tidplan eller pris börjar glida?",
@@ -44,12 +44,18 @@ export const faqs = [
   },
 ];
 
-export default function Faq() {
+type FaqProps = {
+  limit?: number;
+};
+
+export default function Faq({ limit }: FaqProps = {}) {
+  const items = limit ? faqs.slice(0, limit) : faqs;
+
   return (
     <section className="bg-white">
       <div className="max-w-4xl mx-auto px-6 py-20 md:py-28">
         <Reveal className="divide-y divide-gb-line border-y border-gb-line">
-          {faqs.map((item) => (
+          {items.map((item) => (
             <details key={item.q} className="group py-6 md:py-7">
               <summary className="flex items-start justify-between gap-6 cursor-pointer list-none">
                 <h2 className="text-gb-ink text-lg md:text-xl font-extrabold tracking-tight leading-tight flex-1">

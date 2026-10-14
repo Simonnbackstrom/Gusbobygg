@@ -5,21 +5,9 @@ import Reveal from "./Reveal";
 const reviews = [
   {
     quote:
-      "Gusbo höll ihop hela bygget från ritning till färdig lagård. Vi kunde fokusera på gården och lita på att allt annat rullade.",
-    name: "Namn Namnsson",
-    role: "Mjölkbonde, Ort",
-  },
-  {
-    quote:
-      "De pratar samma språk som oss bönder. Inga krångliga svar, bara raka besked och ett bygge som fungerar i praktiken.",
-    name: "Namn Namnsson",
-    role: "Lantbrukare, Ort",
-  },
-  {
-    quote:
-      "Yrkeskunskapen märks från första mötet. Tidplanen höll, ekonomin höll, och stallet gör precis det vi behöver.",
-    name: "Namn Namnsson",
-    role: "Djuruppfödare, Ort",
+      "Bygget flöt på bra och det gick snabbare än förväntat.",
+    name: "Anders N",
+    role: "Bonde",
   },
 ];
 
@@ -35,7 +23,7 @@ export default function Reviews() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20">
+        <div className="grid grid-cols-1 gap-6 md:gap-8 mb-16 md:mb-20 max-w-2xl mx-auto">
           {reviews.map((r, i) => (
             <Reveal key={i} delay={i * 100} className="flex">
             <figure

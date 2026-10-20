@@ -31,9 +31,9 @@ export default function Story({ cta }: StoryProps = {}) {
             <div className="space-y-5 text-gb-ink/75 text-lg leading-relaxed">
               <p>
                 Emblemet på jackan kommer från gården. Det är inte en logotyp
-                vi fick av en designer. Det är var vi växte upp. Allt vi
-                bygger är format av arbetet i stall, skiften och ladugårdar
-                snarare än på ritbordet.
+                vi fick av en designer. Det är där vi växte upp. Allt vi
+                bygger formas av arbetet i stall, skiften och ladugårdar
+                snarare än av ritbordet.
               </p>
               <p>
                 När vi bygger åt en bonde vet vi hur en gård fungerar från

@@ -5,9 +5,10 @@ import PageHeader from "@/components/PageHeader";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
+import { breadcrumbJsonLd, jsonLdProps } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Kontakt. Prata med oss om ditt ladugårdsbygge",
+  title: "Kontakt, prata med oss om ditt ladugårdsbygge",
   description:
     "Ring, mejla eller skicka ett meddelande så hör vi av oss inom ett par dagar. Totalentreprenör för djurstallar i Hälsingland och Gästrikland.",
   alternates: { canonical: "/kontakt" },
@@ -38,9 +39,14 @@ const infoItems = [
   },
 ];
 
+const breadcrumbs = breadcrumbJsonLd([
+  { name: "Kontakt", path: "/kontakt" },
+]);
+
 export default function KontaktPage() {
   return (
     <main>
+      <script {...jsonLdProps(breadcrumbs)} />
       <Nav />
       <PageHeader
         eyebrow="Kontakt"

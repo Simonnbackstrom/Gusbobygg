@@ -42,7 +42,7 @@ export default function Footer() {
             <p className="text-gb-slate text-sm leading-relaxed mb-5">
               Totalentreprenör inom djurstallar och lantbruksbyggnader. Vi
               bygger ladugårdar åt bönder, från första ritning till den
-              dagen korna står inne.
+              dag korna står inne.
             </p>
             <p className="text-gb-slate text-sm leading-relaxed mb-6">
               Rötter i jordbruket, hantverk som håller. Vi utgår från

@@ -7,32 +7,32 @@ const pillars = [
   {
     number: "01",
     h: "Allt ingår i paketet",
-    p: "Ett pris. Mark, platta, stomme, VVS och el är med från början. Inga tillägg på vägen.",
+    p: "Ett pris, där mark, platta, stomme, VVS och el är med från början, utan tillägg på vägen.",
     img: "/images/kamera/bygg-03.jpg",
     alt: "Betongarbete på byggplats",
   },
   {
     number: "02",
     h: "Vi anlitar leverantörerna",
-    p: "Varje leverantör har egen arbetsledare. Vi håller ihop dem och planerar flödet.",
+    p: "Varje leverantör har egen arbetsledare och vi håller ihop dem och planerar flödet.",
     img: "/images/kamera/bygg-06.jpg",
     alt: "Byggplats med hjullastare",
   },
   {
     number: "03",
     h: "Du har en kontakt",
-    p: "En person att ringa, en som vet var projektet står. Du slipper hänga i luren mellan hantverkare.",
+    p: "En person att ringa, en som vet var projektet står, så du slipper hänga i luren mellan hantverkare.",
     img: "/images/team/edvin.jpg",
     alt: "Edvin Säll, grundare och projektledare",
   },
 ];
 
 const included = [
-  { label: "Mark", desc: "Avbaning, dränering, fyllning." },
+  { label: "Mark", desc: "Avbaning, dränering och fyllning." },
   { label: "Platta", desc: "Betong och grund efter besättning och maskiner." },
-  { label: "Stomme", desc: "Trä eller stål. Tak, väggar och fasad." },
+  { label: "Stomme", desc: "Trä eller stål, för tak, väggar och fasad." },
   { label: "VVS", desc: "Vatten, avlopp, värme och ventilation." },
-  { label: "El", desc: "Belysning, kraft och styr. Förberett för robot och foder." },
+  { label: "El", desc: "Belysning, kraft och styr, förberett för robot och foder." },
 ];
 
 export default function WhatWeDo() {
@@ -46,7 +46,7 @@ export default function WhatWeDo() {
               Allt som ingår i priset.
             </h2>
             <p className="text-gb-slate text-lg leading-[1.6]">
-              Fem delar, en leverans, ett avtal.
+              Fem delar i en leverans och ett avtal.
             </p>
           </div>
 

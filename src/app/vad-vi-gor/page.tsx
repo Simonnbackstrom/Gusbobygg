@@ -9,24 +9,30 @@ import Gallery from "@/components/Gallery";
 import CtaBand from "@/components/CtaBand";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
+import { breadcrumbJsonLd, jsonLdProps } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Vad vi bygger. Ladugårdar, djurstallar och lantbruksbyggnader",
+  title: "Vad vi bygger, ladugårdar, djurstallar och lantbruksbyggnader",
   description:
-    "Mjölkladugårdar, ungdjurstall, maskinhallar och om- och tillbyggnader. Totalentreprenad med en kontaktpunkt från ritning till inflytt.",
+    "Mjölkladugårdar, ungdjurstall, maskinhallar och om- och tillbyggnader, totalentreprenad med en kontaktpunkt från ritning till inflytt.",
   alternates: { canonical: "/vad-vi-gor" },
   openGraph: {
     title: "Vad vi bygger | Gusbo Bygg",
     description:
-      "Ladugårdar, djurstallar och lantbruksbyggnader. Totalentreprenad från ritning till inflytt.",
+      "Ladugårdar, djurstallar och lantbruksbyggnader, totalentreprenad från ritning till inflytt.",
     url: "/vad-vi-gor",
     type: "website",
   },
 };
 
+const breadcrumbs = breadcrumbJsonLd([
+  { name: "Vad vi bygger", path: "/vad-vi-gor" },
+]);
+
 export default function VadViGorPage() {
   return (
     <main>
+      <script {...jsonLdProps(breadcrumbs)} />
       <Nav />
       <PageHeader
         image="/images/flygfoto/hero.jpg"
@@ -34,7 +40,7 @@ export default function VadViGorPage() {
         priority
         eyebrow="Så bygger vi"
         title="Totalentreprenör för ditt nya kostall."
-        lead="Vi bygger ditt kostall efter ett beprövat koncept. Från första ritning till den dag korna står inne. En kontakt, ett avtal, hela vägen."
+        lead="Vi bygger ditt kostall efter ett beprövat koncept, från första ritning till den dag korna står inne, med en kontakt och ett avtal hela vägen."
         cta={
           <Link
             href="/kontakt"

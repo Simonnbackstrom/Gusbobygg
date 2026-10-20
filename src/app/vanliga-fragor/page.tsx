@@ -5,6 +5,7 @@ import Faq, { faqs } from "@/components/Faq";
 import CtaBand from "@/components/CtaBand";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
+import { breadcrumbJsonLd, jsonLdProps } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Vanliga frågor om att bygga ladugård",
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Vanliga frågor om att bygga ladugård | Gusbo Bygg",
     description:
-      "Svar på det bönder brukar fråga oss först. Pris, tidplan, bygglov, mark, finansiering och totalentreprenad.",
+      "Svar på det bönder brukar fråga oss först: pris, tidplan, bygglov, mark, finansiering och totalentreprenad.",
     url: "/vanliga-fragor",
     type: "website",
   },
@@ -33,9 +34,14 @@ const faqJsonLd = {
   })),
 };
 
+const breadcrumbs = breadcrumbJsonLd([
+  { name: "Vanliga frågor", path: "/vanliga-fragor" },
+]);
+
 export default function VanligaFragorPage() {
   return (
     <main>
+      <script {...jsonLdProps(breadcrumbs)} />
       <Nav />
       <PageHeader
         eyebrow="Vanliga frågor"

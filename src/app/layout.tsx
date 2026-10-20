@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 
@@ -15,7 +15,7 @@ const SITE_NAME = "Gusbo Bygg";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Gusbo Bygg. Totalentreprenör inom djurstallar och lantbruk",
+    default: "Gusbo Bygg, totalentreprenör inom djurstallar och lantbruk",
     template: "%s | Gusbo Bygg",
   },
   description:
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     locale: "sv_SE",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: "Gusbo Bygg. Totalentreprenör inom djurstallar och lantbruk",
+    title: "Gusbo Bygg, totalentreprenör inom djurstallar och lantbruk",
     description:
       "Vi bygger ladugårdar åt bönder. Totalentreprenör med rötter i jordbruket.",
     images: [
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gusbo Bygg. Totalentreprenör inom djurstallar och lantbruk",
+    title: "Gusbo Bygg, totalentreprenör inom djurstallar och lantbruk",
     description:
       "Vi bygger ladugårdar åt bönder. Totalentreprenör med rötter i jordbruket.",
     images: ["/images/flygfoto/hero.jpg"],
@@ -81,6 +81,13 @@ export const metadata: Metadata = {
   category: "construction",
 };
 
+export const viewport: Viewport = {
+  themeColor: "#24402F",
+  colorScheme: "light",
+  width: "device-width",
+  initialScale: 1,
+};
+
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "GeneralContractor",
@@ -91,7 +98,7 @@ const organizationJsonLd = {
   logo: `${SITE_URL}/logo.png`,
   image: `${SITE_URL}/images/flygfoto/hero.jpg`,
   description:
-    "Totalentreprenör inom djurstallar och lantbruksbyggnader. Rötter i jordbruket.",
+    "Totalentreprenör inom djurstallar och lantbruksbyggnader med rötter i jordbruket.",
   telephone: "+46703622532",
   email: "info@gusbobygg.se",
   vatID: "SE559518136201",
@@ -104,6 +111,14 @@ const organizationJsonLd = {
     addressRegion: "Gävleborgs län",
     addressCountry: "SE",
   },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "07:00",
+      closes: "17:00",
+    },
+  ],
   areaServed: [
     { "@type": "AdministrativeArea", name: "Hälsingland" },
     { "@type": "AdministrativeArea", name: "Gästrikland" },

@@ -25,8 +25,8 @@ export default function TurnkeyBand() {
             till din gård.
           </h2>
           <p className="text-gb-slate text-lg md:text-xl leading-relaxed mb-10">
-            Allt är klart när du släpper in korna. Ett pris. Ett avtal. En
-            kontakt.
+            Allt är klart när du släpper in korna, med ett pris, ett avtal och
+            en kontakt.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a

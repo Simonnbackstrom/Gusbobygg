@@ -3,15 +3,15 @@ import Reveal from "./Reveal";
 const reasons = [
   {
     title: "Vi tar hela bygget",
-    desc: "En kontakt. Ett pris. Vi sköter allt. Från första mötet till nycklarna i din hand.",
+    desc: "En kontakt och ett pris, och vi sköter allt från första mötet till nycklarna i din hand.",
   },
   {
     title: "Vi kan gården",
-    desc: "Vi är uppvuxna i lantbruket. Vi vet hur ett stall ska funka när korna är inne. Inte bara på ritningen.",
+    desc: "Vi är uppvuxna i lantbruket och vet hur ett stall ska funka när korna är inne, inte bara på ritningen.",
   },
   {
     title: "Rakt och enkelt",
-    desc: "Du ringer oss direkt. Inga mellanled. Vi pratar som bönder gör.",
+    desc: "Du ringer oss direkt, utan mellanled, och vi pratar som bönder gör.",
   },
 ];
 
@@ -43,7 +43,7 @@ export default function WhyGusbo() {
         </div>
 
         <p className="text-white text-center text-base md:text-lg font-semibold mt-16 md:mt-20 max-w-2xl mx-auto">
-          &ldquo;Vi bygger ladugårdar åt bönder. Och vi vet vad vi gör.&rdquo;
+          &ldquo;Vi bygger ladugårdar åt bönder, och vi vet vad vi gör.&rdquo;
         </p>
       </div>
     </section>

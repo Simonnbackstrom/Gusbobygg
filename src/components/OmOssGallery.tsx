@@ -22,7 +22,7 @@ export default function OmOssGallery() {
             Från verkligheten.
           </h2>
           <p className="text-gb-slate text-lg leading-relaxed">
-            Bilder från våra byggarbetsplatser och gårdarna vi bygger åt.
+            Bilder från våra byggarbetsplatser och gårdarna vi bygger på.
             Hantverk, maskiner och djur. Det är det här vi lever för.
           </p>
         </div>

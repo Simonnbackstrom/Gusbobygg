@@ -20,7 +20,7 @@ const projects = [
     ],
     body: [
       "En ny mjölkladugård byggd från grunden åt en gård i Edsbyn. Stommen är i betong och stallet är dimensionerat för fyra robotar, med flöden för foder, gödsel och personal planerade utifrån hur arbetet ser ut i vardagen.",
-      "Vi tog hela entreprenaden och samordnade VVS och el genom bygget. En kontaktpunkt mot gården, en tydlig tidplan och installationer som greppar in i varandra från första dagen.",
+      "Vi tog hela entreprenaden och samordnade VVS och el genom bygget. En kontaktpunkt mot gården, en tydlig tidplan och installationer som samspelar från första dagen.",
     ],
     img: "/images/flygfoto/01.jpg",
   },

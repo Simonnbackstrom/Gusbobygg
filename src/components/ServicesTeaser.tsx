@@ -32,8 +32,9 @@ export default function ServicesTeaser() {
             Vad vi bygger
           </h2>
           <p className="text-gb-slate text-lg leading-relaxed">
-            Markarbete, betong, stomme, installation. En kontaktpunkt genom
-            hela bygget. Ny ladugård, maskinhall eller ombyggnation.
+            Markarbete, betong, stomme och installation, med en kontaktpunkt
+            genom hela bygget, oavsett om det är ny ladugård, maskinhall eller
+            ombyggnation.
           </p>
         </div>
 

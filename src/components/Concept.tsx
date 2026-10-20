@@ -6,17 +6,17 @@ const features = [
   {
     number: "01",
     h: "Allt ingår",
-    p: "Mark, platta, stomme, VVS och el. En leverans. Ett pris.",
+    p: "Mark, platta, stomme, VVS och el i en leverans och till ett pris.",
   },
   {
     number: "02",
     h: "Vi anlitar leverantörerna",
-    p: "Varje leverantör har egen arbetsledare. Du slipper hålla reda på dem.",
+    p: "Varje leverantör har egen arbetsledare, så du slipper hålla reda på dem.",
   },
   {
     number: "03",
     h: "Du har en kontakt",
-    p: "Vi projektleder bygget. En person att ringa från start till nycklar.",
+    p: "Vi projektleder bygget och du har en person att ringa från start till nycklar.",
   },
 ];
 
@@ -34,7 +34,7 @@ const steps = [
   {
     number: "03",
     title: "Du får ett pris",
-    desc: "Pris på hela bygget. Ibland redan på mötet.",
+    desc: "Pris på hela bygget, ibland redan på mötet.",
   },
   {
     number: "04",
@@ -44,17 +44,22 @@ const steps = [
   {
     number: "05",
     title: "Projektering",
-    desc: "Vi samlar leverantörerna. Ritningar, tidplan och tillstånd på plats.",
+    desc: "Vi samlar leverantörerna och lägger ritningar, tidplan och tillstånd på plats.",
   },
   {
     number: "06",
     title: "Bygget startar",
-    desc: "Varje leverantör gör sitt. Vi styr helheten. Du sköter gården.",
+    desc: "Varje leverantör gör sitt, vi styr helheten och du sköter gården.",
   },
   {
     number: "07",
     title: "Byggmöte varje månad",
     desc: "Vi ses en gång i månaden tills nycklarna är dina.",
+  },
+  {
+    number: "08",
+    title: "Slutbesiktning",
+    desc: "En oberoende besiktningsman går igenom bygget med dig. Allt protokollförs och eventuella anmärkningar åtgärdas innan överlämning.",
   },
 ];
 
@@ -70,8 +75,8 @@ export default function Concept() {
             till din gård.
           </h2>
           <p className="text-gb-slate text-lg md:text-xl leading-[1.6]">
-            Allt är klart när du släpper in korna. Ett pris. Ett avtal. En
-            kontakt.
+            Allt är klart när du släpper in korna, med ett pris, ett avtal och
+            en kontakt.
           </p>
         </div>
       </div>
@@ -123,7 +128,7 @@ export default function Concept() {
             Så går det till
           </span>
           <h3 className="text-gb-ink text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.05]">
-            Från du ringer tills
+            Från att du ringer tills
             <br />
             korna står inne.
           </h3>

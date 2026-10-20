@@ -5,14 +5,15 @@ import ProjectsDetail from "@/components/ProjectsDetail";
 import CtaBand from "@/components/CtaBand";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
+import { breadcrumbJsonLd, jsonLdProps } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Referensprojekt. Ladugårdar och djurstallar vi byggt",
+  title: "Referensprojekt, ladugårdar och djurstallar vi byggt",
   description:
-    "Mjölkladugårdar och ungdjurstall vi tagit totalansvar för i Hälsingland och Gästrikland. Från ritning till inflytt, en kontaktpunkt genom hela bygget.",
+    "Mjölkladugårdar och ungdjurstall vi tagit totalansvar för i Hälsingland och Gästrikland, från ritning till inflytt, med en kontaktpunkt genom hela bygget.",
   alternates: { canonical: "/projekt" },
   openGraph: {
-    title: "Referensprojekt. Ladugårdar och djurstallar | Gusbo Bygg",
+    title: "Referensprojekt, ladugårdar och djurstallar | Gusbo Bygg",
     description:
       "Mjölkladugårdar och ungdjurstall vi byggt i Hälsingland och Gästrikland.",
     url: "/projekt",
@@ -20,9 +21,14 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbs = breadcrumbJsonLd([
+  { name: "Referensprojekt", path: "/projekt" },
+]);
+
 export default function ProjektPage() {
   return (
     <main>
+      <script {...jsonLdProps(breadcrumbs)} />
       <Nav />
       <PageHeader
         eyebrow="Referensprojekt"
@@ -33,7 +39,7 @@ export default function ProjektPage() {
             för sig självt.
           </>
         }
-        lead="Projekt vi tagit totalansvar för, från första skiss till överlämning. En kontaktpunkt, tydlig tidplan och hantverk som håller."
+        lead="Projekt vi tagit totalansvar för, från första skiss till överlämning, med en kontaktpunkt, tydlig tidplan och hantverk som håller."
       />
       <ProjectsDetail />
       <Reveal><CtaBand heading="Vill du prata om liknande projekt?" /></Reveal>

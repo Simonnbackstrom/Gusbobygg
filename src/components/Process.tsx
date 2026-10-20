@@ -12,7 +12,7 @@ const steps = [
   {
     number: "03",
     title: "Du får ett pris",
-    desc: "Pris på hela bygget. Mark, platta, stomme, VVS och el i samma offert. Ibland redan på mötet.",
+    desc: "Pris på hela bygget, med mark, platta, stomme, VVS och el i samma offert, ibland redan på mötet.",
   },
   {
     number: "04",
@@ -22,17 +22,22 @@ const steps = [
   {
     number: "05",
     title: "Projektering",
-    desc: "Vi samlar leverantörerna. Ritningar, tidplan och tillstånd läggs på plats innan första spadtaget.",
+    desc: "Vi samlar leverantörerna och lägger ritningar, tidplan och tillstånd på plats innan första spadtaget.",
   },
   {
     number: "06",
     title: "Bygget startar",
-    desc: "Varje leverantör gör sitt. Vi projektleder helheten. Du sköter gården.",
+    desc: "Varje leverantör gör sitt, vi projektleder helheten och du sköter gården.",
   },
   {
     number: "07",
     title: "Byggmöte varje månad",
     desc: "Vi stämmer av med alla inblandade en gång i månaden tills nycklarna är dina.",
+  },
+  {
+    number: "08",
+    title: "Slutbesiktning",
+    desc: "En oberoende besiktningsman går igenom hela bygget med dig. Allt protokollförs, eventuella anmärkningar åtgärdas och först därefter sker överlämning.",
   },
 ];
 
@@ -43,10 +48,10 @@ export default function Process() {
         <div className="max-w-2xl mb-14 md:mb-16">
           <span aria-hidden className="block h-[2px] w-16 bg-gb-forest mb-8" />
           <h2 className="text-gb-ink text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.05] mb-5">
-            Från första samtal till färdig lagård.
+            Från första samtal till färdig ladugård.
           </h2>
           <p className="text-gb-slate text-lg leading-[1.6]">
-            Sju steg. En kontakt genom hela bygget.
+            Åtta steg och en kontakt genom hela bygget.
           </p>
         </div>
 

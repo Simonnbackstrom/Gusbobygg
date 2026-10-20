@@ -16,7 +16,7 @@ export const faqs = [
   },
   {
     q: "Hur fungerar totalentreprenad, vad ingår egentligen?",
-    a: "Du får en kontaktpunkt och ett pris för hela bygget. Mark, platta, stomme, VVS, el och installationer. Vi anlitar och styr alla leverantörer och tar helhetsansvaret mot dig.",
+    a: "Du får en kontaktpunkt och ett pris för hela bygget, med mark, platta, stomme, VVS, el och installationer. Vi anlitar och styr alla leverantörer och tar helhetsansvaret mot dig.",
   },
   {
     q: "Står ni för markundersökningar och geoteknik?",
@@ -36,7 +36,7 @@ export const faqs = [
   },
   {
     q: "Hur hanterar ni leverantörer och underentreprenörer?",
-    a: "Varje leverantör har sin egen arbetsledare på plats, och vi projektleder helheten. Du har en person att ringa. Vi håller ihop resten.",
+    a: "Varje leverantör har sin egen arbetsledare på plats, och vi projektleder helheten. Du har en person att ringa och vi håller ihop resten.",
   },
   {
     q: "Vad händer om tidplan eller pris börjar glida?",

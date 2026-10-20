@@ -49,7 +49,7 @@ export default function Statement() {
             <div className="mt-8 border-l-2 border-gb-forest pl-5 text-gb-slate text-sm md:text-base leading-[1.7]">
               Jag växte upp i ladugården och arbetade med djur innan jag
               började bygga åt dem. Den kombinationen av bondens vardag och
-              hantverkarens öga är det som gör att stallen vi reser håller
+              hantverkarens öga är det som gör att stallen vi bygger håller
               för drift, djur och de som ska jobba där varje dag.
             </div>
 

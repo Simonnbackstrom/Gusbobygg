@@ -31,8 +31,10 @@ const included = [
   { label: "Mark", desc: "Avbaning, dränering och fyllning." },
   { label: "Platta", desc: "Betong och grund efter besättning och maskiner." },
   { label: "Stomme", desc: "Trä eller stål, för tak, väggar och fasad." },
-  { label: "VVS", desc: "Vatten, avlopp, värme och ventilation." },
+  { label: "VVS", desc: "Vatten, avlopp och värme." },
   { label: "El", desc: "Belysning, kraft och styr, förberett för robot och foder." },
+  { label: "Inredning", desc: "Boxar, grindar och liggbås anpassade efter din besättning." },
+  { label: "Ventilation", desc: "Luftflöde och klimat som ger djuren rätt förutsättningar året runt." },
 ];
 
 export default function WhatWeDo() {
@@ -46,11 +48,11 @@ export default function WhatWeDo() {
               Allt som ingår i priset.
             </h2>
             <p className="text-gb-slate text-lg leading-[1.6]">
-              Fem delar i en leverans och ett avtal.
+              Sju delar i en leverans och ett avtal.
             </p>
           </div>
 
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-5">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-5">
             {included.map((item, i) => (
               <Reveal key={item.label} delay={i * 80} className="flex">
                 <li className="bg-white border border-gb-line p-6 md:p-7 w-full">
@@ -78,7 +80,9 @@ export default function WhatWeDo() {
               Så jobbar vi.
             </h2>
             <p className="text-gb-slate text-lg leading-[1.6]">
-              Tre saker som gör att du kan luta dig tillbaka under bygget.
+              Vi gör det enkelt att vara jordbrukare under byggnationen.
+              Tillsammans med vårt team av entreprenörer så hjälper vi dig
+              hela vägen.
             </p>
           </div>
 

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Gusbo Bygg",
   },
   description:
-    "Vi bygger ladugårdar åt bönder och vi vet vad vi gör. Totalentreprenör inom djurstallar och lantbruksbyggnader, med rötter i jordbruket.",
+    "Vi bygger framtidens jordbruk, och vi vet vad som behövs. Totalentreprenör inom djurstallar och lantbruksbyggnader, med rötter i jordbruket.",
   applicationName: SITE_NAME,
   authors: [{ name: "Aktiebolaget Gusbo Bygg" }],
   creator: SITE_NAME,
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: "Gusbo Bygg, totalentreprenör inom djurstallar och lantbruk",
     description:
-      "Vi bygger ladugårdar åt bönder. Totalentreprenör med rötter i jordbruket.",
+      "Vi bygger framtidens jordbruk. Totalentreprenör med rötter i jordbruket.",
     images: [
       {
         url: "/images/flygfoto/hero.jpg",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Gusbo Bygg, totalentreprenör inom djurstallar och lantbruk",
     description:
-      "Vi bygger ladugårdar åt bönder. Totalentreprenör med rötter i jordbruket.",
+      "Vi bygger framtidens jordbruk. Totalentreprenör med rötter i jordbruket.",
     images: ["/images/flygfoto/hero.jpg"],
   },
   robots: {

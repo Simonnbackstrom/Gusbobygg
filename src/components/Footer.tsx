@@ -41,7 +41,7 @@ export default function Footer() {
             </Link>
             <p className="text-gb-slate text-sm leading-relaxed mb-5">
               Totalentreprenör inom djurstallar och lantbruksbyggnader. Vi
-              bygger ladugårdar åt bönder, från första ritning till den
+              bygger framtidens jordbruk, från första ritning till den
               dag korna står inne.
             </p>
             <p className="text-gb-slate text-sm leading-relaxed mb-6">

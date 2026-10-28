@@ -19,15 +19,11 @@ export default function TurnkeyBand() {
 
         <Reveal className="max-w-3xl mx-auto text-center">
           <span aria-hidden className="block h-[2px] w-16 bg-gb-forest mx-auto mb-8" />
-          <h2 className="text-gb-ink text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05] mb-6">
-            Få en färdig ladugård
+          <h2 className="text-gb-ink text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05] mb-10">
+            Det ska vara enkelt att
             <br />
-            till din gård.
+            bygga upp sitt jordbruk.
           </h2>
-          <p className="text-gb-slate text-lg md:text-xl leading-relaxed mb-10">
-            Allt är klart när du släpper in korna, med ett pris, ett avtal och
-            en kontakt.
-          </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href="tel:+46703622532"

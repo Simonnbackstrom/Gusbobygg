@@ -31,20 +31,23 @@ export default function Story({ cta }: StoryProps = {}) {
             <div className="space-y-5 text-gb-ink/75 text-lg leading-relaxed">
               <p>
                 Emblemet på jackan kommer från gården. Det är inte en logotyp
-                vi fick av en designer. Det är där vi växte upp. Allt vi
-                bygger formas av arbetet i stall, skiften och ladugårdar
-                snarare än av ritbordet.
+                vi fick av en designer, det är där jag växte upp. Jag lärde
+                mig gården innan jag lärde mig läsa, mjölkade innan jag tog
+                körkort och körde traktor innan jag ens nådde upp till
+                pedalerna.
               </p>
               <p>
-                När vi bygger åt en bonde vet vi hur en gård fungerar från
-                insidan. Var mjölkroboten står, hur fodret hittar in, hur en
-                besättning rör sig. Den kunskapen låter sig inte hyras in.
+                Allt vi bygger formas av arbetet i stall, skiften och
+                ladugårdar snarare än av ritbordet. När vi bygger åt en bonde
+                vet vi hur en gård fungerar från insidan. Var mjölkroboten
+                står, hur fodret hittar in, hur en besättning rör sig. Den
+                kunskapen låter sig inte hyras in.
               </p>
             </div>
 
             <blockquote className="mt-10 border-l-2 border-gb-forest pl-6 text-gb-ink text-xl md:text-2xl font-semibold leading-snug italic">
               &ldquo;Trovärdiga och kompetenta i det vi håller på med. Vi bygger
-              ladugårdar åt bönder och vi vet vad vi gör.&rdquo;
+              ladugårdar åt bönder och vi vet vad som behövs.&rdquo;
             </blockquote>
 
             {cta && (

@@ -25,9 +25,9 @@ export default function Statement() {
 
           <div className="md:col-span-7">
             <h2 className="text-gb-ink text-3xl md:text-4xl font-extrabold tracking-tight leading-[1.05]">
-              Vi bygger ladugårdar åt{" "}
+              Vi bygger framtidens{" "}
               <span className="text-gb-forest underline decoration-gb-forest/30 decoration-[3px] underline-offset-[8px]">
-                bönder
+                jordbruk
               </span>
               .
             </h2>

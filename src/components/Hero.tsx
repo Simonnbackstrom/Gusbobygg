@@ -22,7 +22,7 @@ export default function Hero() {
           className="gb-hero-rise text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] tracking-tight mb-6 max-w-[18ch] md:max-w-none md:whitespace-nowrap text-balance"
           style={{ animationDelay: "120ms" }}
         >
-          Vi bygger ladugårdar åt bönder.
+          Vi bygger framtidens jordbruk.
         </h1>
 
         <span

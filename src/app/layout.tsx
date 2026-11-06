@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
+import { SITE_URL, SITE_NAME, siteGraph } from "@/lib/seo";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -8,9 +9,6 @@ const montserrat = Montserrat({
   display: "swap",
   weight: ["400", "600", "700", "800"],
 });
-
-const SITE_URL = "https://gusbobygg.se";
-const SITE_NAME = "Gusbo Bygg";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -74,9 +72,18 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+  formatDetection: {
+    telephone: true,
+    email: true,
+    address: true,
+  },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/logo.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/logo.png", type: "image/png", sizes: "692x760" },
+    ],
+    apple: [{ url: "/logo.png", sizes: "692x760", type: "image/png" }],
+    shortcut: "/favicon.ico",
   },
   category: "construction",
 };
@@ -88,55 +95,6 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "GeneralContractor",
-  "@id": `${SITE_URL}/#organization`,
-  name: "Aktiebolaget Gusbo Bygg",
-  alternateName: "Gusbo Bygg",
-  url: SITE_URL,
-  logo: `${SITE_URL}/logo.png`,
-  image: `${SITE_URL}/images/flygfoto/hero.jpg`,
-  description:
-    "Totalentreprenör inom djurstallar och lantbruksbyggnader med rötter i jordbruket.",
-  telephone: "+46703622532",
-  email: "info@gusbobygg.se",
-  vatID: "SE559518136201",
-  taxID: "559518-1362",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Gusbo 6613",
-    postalCode: "823 91",
-    addressLocality: "Kilafors",
-    addressRegion: "Gävleborgs län",
-    addressCountry: "SE",
-  },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "07:00",
-      closes: "17:00",
-    },
-  ],
-  areaServed: [
-    { "@type": "AdministrativeArea", name: "Hälsingland" },
-    { "@type": "AdministrativeArea", name: "Gästrikland" },
-    { "@type": "AdministrativeArea", name: "Gävleborgs län" },
-  ],
-  sameAs: ["https://www.linkedin.com/in/edvin-säll-41a42a43b/"],
-};
-
-const websiteJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": `${SITE_URL}/#website`,
-  url: SITE_URL,
-  name: SITE_NAME,
-  inLanguage: "sv-SE",
-  publisher: { "@id": `${SITE_URL}/#organization` },
-};
-
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="sv" className={`${montserrat.variable} h-full`} data-scroll-behavior="smooth">
@@ -144,9 +102,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {children}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify([organizationJsonLd, websiteJsonLd]),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteGraph) }}
         />
       </body>
     </html>

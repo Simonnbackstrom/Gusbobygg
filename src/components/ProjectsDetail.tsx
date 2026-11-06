@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Reveal from "./Reveal";
 
-const projects = [
+export const projects = [
   {
     slug: "mjolkladugard-edsbyn",
     label: "Projekt 01",

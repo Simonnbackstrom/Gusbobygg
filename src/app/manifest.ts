@@ -11,16 +11,20 @@ export default function manifest(): MetadataRoute.Manifest {
     background_color: "#ffffff",
     theme_color: "#24402F",
     lang: "sv-SE",
+    categories: ["business", "productivity"],
+    orientation: "portrait",
+    scope: "/",
     icons: [
       {
         src: "/favicon.ico",
-        sizes: "any",
+        sizes: "32x32 16x16",
         type: "image/x-icon",
       },
       {
         src: "/logo.png",
-        sizes: "512x512",
+        sizes: "692x760",
         type: "image/png",
+        purpose: "any",
       },
     ],
   };

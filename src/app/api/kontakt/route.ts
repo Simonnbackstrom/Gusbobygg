@@ -1,7 +1,5 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 function escapeHtml(value: string) {
   return value
     .replace(/&/g, "&amp;")
@@ -42,9 +40,20 @@ export async function POST(request: Request) {
     );
   }
 
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.error("RESEND_API_KEY saknas");
+    return Response.json(
+      { error: "Mejltjänsten är inte konfigurerad" },
+      { status: 500 },
+    );
+  }
+
   const to = process.env.CONTACT_TO ?? "info@gusbobygg.se";
   const from =
     process.env.RESEND_FROM ?? "Gusbo Bygg <onboarding@resend.dev>";
+
+  const resend = new Resend(apiKey);
 
   const rows = [
     ["Namn", namn],

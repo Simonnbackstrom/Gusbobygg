@@ -9,7 +9,7 @@ import Gallery from "@/components/Gallery";
 import CtaBand from "@/components/CtaBand";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
-import { breadcrumbJsonLd, jsonLdProps } from "@/lib/seo";
+import { breadcrumbJsonLd, jsonLdProps, serviceCatalogJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Vad vi bygger, ladugårdar, djurstallar och lantbruksbyggnader",
@@ -29,10 +29,50 @@ const breadcrumbs = breadcrumbJsonLd([
   { name: "Vad vi bygger", path: "/vad-vi-gor" },
 ]);
 
+const serviceCatalog = serviceCatalogJsonLd([
+  {
+    name: "Mjölkladugård",
+    description:
+      "Nybyggnation av mjölkladugårdar med boxar, mjölkrobot, foder och gödselhantering planerat efter besättning.",
+    path: "/vad-vi-gor",
+  },
+  {
+    name: "Ungdjurstall",
+    description:
+      "Ungdjurstall med rätt flöden, kalvamma och klimat för kvigor från avvänjning till inseminering.",
+    path: "/vad-vi-gor",
+  },
+  {
+    name: "Maskinhall och lantbruksbyggnad",
+    description:
+      "Maskinhallar, logar och lantbruksbyggnader med stomme i trä eller stål.",
+    path: "/vad-vi-gor",
+  },
+  {
+    name: "Om- och tillbyggnad",
+    description:
+      "Tillbyggnad eller ombyggnad av befintlig ladugård när grunden är bra och det räcker att bygga vidare.",
+    path: "/vad-vi-gor",
+  },
+  {
+    name: "Mark, platta och grundläggning",
+    description:
+      "Avbaning, dränering, fyllning och betongplatta dimensionerad efter besättning och maskiner.",
+    path: "/vad-vi-gor",
+  },
+  {
+    name: "VVS och el i lantbruksbyggnad",
+    description:
+      "Vatten, avlopp, värme, belysning, kraft och styr, förberett för robot, foder och ventilation.",
+    path: "/vad-vi-gor",
+  },
+]);
+
 export default function VadViGorPage() {
   return (
     <main>
       <script {...jsonLdProps(breadcrumbs)} />
+      <script {...jsonLdProps(serviceCatalog)} />
       <Nav />
       <PageHeader
         image="/images/flygfoto/hero.jpg"

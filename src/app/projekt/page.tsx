@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import PageHeader from "@/components/PageHeader";
-import ProjectsDetail from "@/components/ProjectsDetail";
+import ProjectsDetail, { projects } from "@/components/ProjectsDetail";
 import CtaBand from "@/components/CtaBand";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
-import { breadcrumbJsonLd, jsonLdProps } from "@/lib/seo";
+import {
+  breadcrumbJsonLd,
+  jsonLdProps,
+  projectItemListJsonLd,
+} from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Referensprojekt, ladugårdar och djurstallar vi byggt",
@@ -25,10 +29,23 @@ const breadcrumbs = breadcrumbJsonLd([
   { name: "Referensprojekt", path: "/projekt" },
 ]);
 
+const projectsList = projectItemListJsonLd(
+  "/projekt",
+  projects.map((p) => ({
+    slug: p.slug,
+    name: p.title,
+    description: p.body[0],
+    image: p.img,
+    locality: p.location,
+    year: p.year,
+  })),
+);
+
 export default function ProjektPage() {
   return (
     <main>
       <script {...jsonLdProps(breadcrumbs)} />
+      <script {...jsonLdProps(projectsList)} />
       <Nav />
       <PageHeader
         eyebrow="Referensprojekt"

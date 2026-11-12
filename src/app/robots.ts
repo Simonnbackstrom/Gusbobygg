@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://gusbobygg.se/sitemap.xml",
-    host: "https://gusbobygg.se",
+    sitemap: "https://gusbobygg.com/sitemap.xml",
+    host: "https://gusbobygg.com",
   };
 }

@@ -1,12 +1,58 @@
+"use client";
+
 import Image from "next/image";
+import { useState, type FormEvent } from "react";
 import { ArrowRight, Phone } from "lucide-react";
 
+type Status = "idle" | "sending" | "success" | "error";
+
 export default function HomeForm() {
+  const [status, setStatus] = useState<Status>("idle");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (status === "sending") return;
+
+    const form = event.currentTarget;
+    const data = new FormData(form);
+
+    setStatus("sending");
+    setErrorMessage(null);
+
+    try {
+      const res = await fetch("/api/kontakt", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          namn: data.get("namn"),
+          telefon: data.get("telefon"),
+          epost: data.get("epost"),
+          meddelande: data.get("meddelande"),
+          kalla: "Offertformulär (startsida)",
+        }),
+      });
+
+      const json = (await res.json().catch(() => ({}))) as {
+        error?: string;
+      };
+
+      if (!res.ok) {
+        setStatus("error");
+        setErrorMessage(json.error ?? "Något gick fel. Försök igen.");
+        return;
+      }
+
+      setStatus("success");
+      form.reset();
+    } catch {
+      setStatus("error");
+      setErrorMessage("Kunde inte nå servern. Försök igen.");
+    }
+  }
+
   return (
-    <section
-      id="offert"
-      className="bg-gb-forest py-24 md:py-32"
-    >
+    <section id="offert" className="bg-gb-forest py-24 md:py-32">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20">
           <div>
@@ -45,12 +91,7 @@ export default function HomeForm() {
           </div>
 
           <div>
-            <form
-              action="mailto:info@gusbobygg.se"
-              method="post"
-              encType="text/plain"
-              className="flex flex-col gap-5"
-            >
+            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="flex flex-col gap-2">
                   <label className="text-gb-mint text-xs font-bold tracking-[0.12em] uppercase">
@@ -103,11 +144,25 @@ export default function HomeForm() {
 
               <button
                 type="submit"
-                className="inline-flex items-center justify-center gap-3 bg-white text-gb-forest font-bold text-sm px-8 py-4 hover:bg-gb-mint-tint transition-colors duration-200 self-start tracking-wide"
+                disabled={status === "sending"}
+                className="inline-flex items-center justify-center gap-3 bg-white text-gb-forest font-bold text-sm px-8 py-4 hover:bg-gb-mint-tint transition-colors duration-200 self-start tracking-wide disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Skicka meddelande
-                <ArrowRight size={16} strokeWidth={2.5} />
+                {status === "sending" ? "Skickar…" : "Skicka meddelande"}
+                {status !== "sending" && (
+                  <ArrowRight size={16} strokeWidth={2.5} />
+                )}
               </button>
+
+              {status === "success" && (
+                <p className="text-white text-sm" role="status">
+                  Tack! Vi återkommer så snart vi kan.
+                </p>
+              )}
+              {status === "error" && (
+                <p className="text-red-200 text-sm" role="alert">
+                  {errorMessage}
+                </p>
+              )}
             </form>
           </div>
         </div>

@@ -1,4 +1,4 @@
-export const SITE_URL = "https://gusbobygg.se";
+export const SITE_URL = "https://gusbobygg.com";
 export const SITE_NAME = "Gusbo Bygg";
 export const SITE_LOCALE = "sv-SE";
 
@@ -9,8 +9,8 @@ const MAPS_URL =
 const logoNode = {
   "@type": "ImageObject",
   "@id": `${SITE_URL}/#logo`,
-  url: `${SITE_URL}/logo.png`,
-  contentUrl: `${SITE_URL}/logo.png`,
+  url: `${SITE_URL}/icon.png`,
+  contentUrl: `${SITE_URL}/icon.png`,
   caption: SITE_NAME,
   width: 512,
   height: 512,

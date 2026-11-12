@@ -19,10 +19,10 @@ export default function Hero() {
 
       <div className="relative max-w-6xl mx-auto px-6 pt-32 pb-24 w-full flex flex-col items-center text-center">
         <h1
-          className="gb-hero-rise text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] tracking-tight mb-6 max-w-[18ch] md:max-w-none md:whitespace-nowrap text-balance"
+          className="gb-hero-rise text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] tracking-tight mb-6 md:max-w-none md:whitespace-nowrap"
           style={{ animationDelay: "120ms" }}
         >
-          Vi bygger framtidens jordbruk.
+          Vi bygger framtidens<br className="md:hidden" /> jordbruk.
         </h1>
 
         <span

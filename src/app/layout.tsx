@@ -45,21 +45,12 @@ export const metadata: Metadata = {
     title: "Gusbo Bygg, totalentreprenör inom djurstallar och lantbruk",
     description:
       "Vi bygger framtidens jordbruk. Totalentreprenör med rötter i jordbruket.",
-    images: [
-      {
-        url: "/images/flygfoto/hero.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Gårdsmiljö med ladugård, silo och skog",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Gusbo Bygg, totalentreprenör inom djurstallar och lantbruk",
     description:
       "Vi bygger framtidens jordbruk. Totalentreprenör med rötter i jordbruket.",
-    images: ["/images/flygfoto/hero.jpg"],
   },
   robots: {
     index: true,
@@ -76,14 +67,6 @@ export const metadata: Metadata = {
     telephone: true,
     email: true,
     address: true,
-  },
-  icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/logo.png", type: "image/png", sizes: "692x760" },
-    ],
-    apple: [{ url: "/logo.png", sizes: "692x760", type: "image/png" }],
-    shortcut: "/favicon.ico",
   },
   category: "construction",
 };
